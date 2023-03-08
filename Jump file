@@ -1,0 +1,15 @@
+Dear [Name],
+
+My name is Tim and I am part of the EUC team at [Your Company]. As part of our ongoing Java consolidation project, we are developing a script to inventory, track, and meter Java usage on machines across our organization.
+
+We are currently in the testing phase of the script and we are looking for volunteers to participate in this testing. I am reaching out to you to request your assistance with this. By participating in this testing, you will be helping us gather relevant telemetry that will help us improve the script and ensure that it is working properly before we deploy it more widely.
+
+In order to participate, I kindly request that you provide me with your machine name so that I can initiate the process. The script will run in the background without any user action necessary for now and will collect data on the Java processes running on your machine.
+
+If you could please reply to this email with your machine name at your earliest convenience, I would greatly appreciate it. Once I have received this information, I will provide you with further instructions on how to participate in the testing.
+
+Thank you very much for your cooperation and assistance with this matter.
+
+Best regards,
+
+Tim
