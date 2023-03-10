@@ -1,15 +1,27 @@
-Dear [Name],
+Objective:
+To test the RF devices' connectivity to the organization's Site specific WiFi using certificate-based authentication via Intune.
 
-My name is Tim and I am part of the EUC team at [Your Company]. As part of our ongoing Java consolidation project, we are developing a script to inventory, track, and meter Java usage on machines across our organization.
+Equipment needed:
 
-We are currently in the testing phase of the script and we are looking for volunteers to participate in this testing. I am reaching out to you to request your assistance with this. By participating in this testing, you will be helping us gather relevant telemetry that will help us improve the script and ensure that it is working properly before we deploy it more widely.
+RF devices
+WiFi network with certificate-based authentication enabled
+Access to the organization's WiFi network
 
-In order to participate, I kindly request that you provide me with your machine name so that I can initiate the process. The script will run in the background without any user action necessary for now and will collect data on the Java processes running on your machine.
+Steps:
 
-If you could please reply to this email with your machine name at your earliest convenience, I would greatly appreciate it. Once I have received this information, I will provide you with further instructions on how to participate in the testing.
+Ensure that the organization's WiFi network is set up with certificate-based authentication enabled a
+Ensure that the target technician have an Enrollment token (QR Code)
+Ensure that a Fresh out of box RF device is connected to the power supply, charged and powered on.
+Ensure that the RF Device is connected to the Site local WIFI Network using the Service Name and Password provided. 
+Ensure to scan the QR code to start the enrollment process. 
+Ensure that the RF devices goes through the enrollment process and have the necessary software, profiles installed to connect to the WiFi network.
+Identify the SSID and network key of the organization' site specific WiFi network.
+Record any issues or errors encountered during the test.
+Analyze the test results and address any issues found.
+Repeat the test as necessary until all RF devices have been successfully connected to the organization's WiFi network using certificate-based authentication.
 
-Thank you very much for your cooperation and assistance with this matter.
+Conclusion:
+By following this test plan, you can ensure that the RF devices can connect to the organization's WiFi network using certificate-based authentication and are capable of performing basic network operations. Any issues encountered during the test can be addressed to ensure that all RF devices are functioning as intended.
 
-Best regards,
 
-Tim
+
