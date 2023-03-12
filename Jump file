@@ -1,4 +1,18 @@
-https://www.ccmtune.fr/2022/03/intune-deployer-dot-net-35.html?search=translate
+.Net FW 3.5: https://www.ccmtune.fr/2022/03/intune-deployer-dot-net-35.html?search=translate
 
-https://github.com/JayRHa/EndpointAnalyticsRemediationScripts
+Uninstall Java using Proactive Remediation: https://www.rockenroll.tech/2023/02/09/uninstall-java-using-proactive-remediation
+
+Coomunity Driven Pro active remed scripts: https://github.com/JayRHa/EndpointAnalyticsRemediationScripts
+
+Unpin the ms Store: https://andrewstaylor.com/2022/08/30/unpinning-the-microsoft-store-using-intune/ (Go with Proactive Rem approach)
+
+Autopilot troubleshooting tools during esp PS GUI Styple: https://andrewstaylor.com/2022/08/16/autopilot-troubleshooting-tools-during-esp/
+
+Customise start menu Win10: https://andrewstaylor.com/2022/05/03/using-intune-to-customise-the-start-menu-on-windows-10-and-windows-11/
+
+Finding devices (and details) assigned to a user in Intune: https://andrewstaylor.com/2021/12/22/finding-devices-and-details-assigned-to-a-user-in-intune/
+
+Getting App ID from Intune for AP Troubleshooting: https://andrewstaylor.com/2021/09/29/getting-app-id-from-intune/
+
+Rename multiple devices in Intune with Graph and a CSV file: https://ugurkoc.de/rename-multiple-devices-in-intune-with-a-csv-file/
 
