@@ -1,27 +1,4 @@
-Objective:
-To test the RF devices' connectivity to the organization's Site specific WiFi using certificate-based authentication via Intune.
+https://www.ccmtune.fr/2022/03/intune-deployer-dot-net-35.html?search=translate
 
-Equipment needed:
-
-RF devices
-WiFi network with certificate-based authentication enabled
-Access to the organization's WiFi network
-
-Steps:
-
-Ensure that the organization's WiFi network is set up with certificate-based authentication enabled a
-Ensure that the target technician have an Enrollment token (QR Code)
-Ensure that a Fresh out of box RF device is connected to the power supply, charged and powered on.
-Ensure that the RF Device is connected to the Site local WIFI Network using the Service Name and Password provided. 
-Ensure to scan the QR code to start the enrollment process. 
-Ensure that the RF devices goes through the enrollment process and have the necessary software, profiles installed to connect to the WiFi network.
-Identify the SSID and network key of the organization' site specific WiFi network.
-Record any issues or errors encountered during the test.
-Analyze the test results and address any issues found.
-Repeat the test as necessary until all RF devices have been successfully connected to the organization's WiFi network using certificate-based authentication.
-
-Conclusion:
-By following this test plan, you can ensure that the RF devices can connect to the organization's WiFi network using certificate-based authentication and are capable of performing basic network operations. Any issues encountered during the test can be addressed to ensure that all RF devices are functioning as intended.
-
-
+https://github.com/JayRHa/EndpointAnalyticsRemediationScripts
 
