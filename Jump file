@@ -19,4 +19,5 @@ Rename multiple devices in Intune with Graph and a CSV file: https://ugurkoc.de/
 Every Niche thing about Graph Permisssions: https://www.french365connection.co.uk/post/graph-sdk-permissions
 
 
+Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | Select-Object "ProductName", "CurrentBuild", "ReleaseId"
 
