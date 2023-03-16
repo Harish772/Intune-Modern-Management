@@ -24,3 +24,4 @@ Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | Select-O
 "%SystemRoot%\System32\Dism.exe" /Online /LogLevel:4 /Add-Package /PackagePath:"microsoft-windows-netfx3-ondemand-package~31bf3856ad364e35~amd64~~.cab" /NoRestart /Quiet
 
 "%SystemRoot%\System32\Dism.exe" /Online /LogLevel:4 /Remove-Capability /CapabilityName:NetFx3~~~~ /NoRestart /Quiet
+The QR code used for device enrollment in Intune is a 2D code. QR stands for Quick Response, and it is a type of two-dimensional barcode that can be easily scanned using a smartphone or other QR code reader. Unlike 1D barcodes, which only contain horizontal lines and can store limited information, 2D barcodes like QR codes can store much more data and contain both horizontal and vertical lines. The Intune QR code contains encrypted information that allows a device to be enrolled into an organization's Intune environment.
