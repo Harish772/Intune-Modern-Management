@@ -6,8 +6,6 @@ Enable Bitlocker via Intune during Autopilot: https://www.linkedin.com/pulse/mus
 
 Uninstall Java using Proactive Remediation: https://www.rockenroll.tech/2023/02/09/uninstall-java-using-proactive-remediation
 
-Community Driven Pro active remed scripts: https://github.com/JayRHa/EndpointAnalyticsRemediationScripts
-
 Unpin the ms Store: https://andrewstaylor.com/2022/08/30/unpinning-the-microsoft-store-using-intune/ (Go with Proactive Rem approach)
 
 Autopilot troubleshooting tools during esp PS GUI Styple: https://andrewstaylor.com/2022/08/16/autopilot-troubleshooting-tools-during-esp/
@@ -23,10 +21,34 @@ Rename multiple devices in Intune with Graph and a CSV file: https://ugurkoc.de/
 Every Niche thing about Graph Permisssions: https://www.french365connection.co.uk/post/graph-sdk-permissions
 
 
+************************************************
+Winget Stuff
+https://winget.run/
+
+https://learn.microsoft.com/en-us/training/modules/explore-windows-package-manager-tool/3-install-uninstall-software
+
+https://learn.microsoft.com/en-us/training/modules/explore-windows-package-manager-tool/?WT.mc_id=AZ-MVP-5004737
+
+https://www.youtube.com/watch?v=ea0g1Y1zaek&ab_channel=Intune%26VitaDoctrina
+
+https://techcommunity.microsoft.com/t5/intune-customer-success/troubleshooting-the-microsoft-store-and-microsoft-intune/ba-p/3750341
+
+https://learn.microsoft.com/en-us/mem/intune/apps/store-apps-microsoft#store-group-policies-restrictions
+
+https://www.ccmtune.fr/2023/04/rename-devices-with-powershell-and.html
+
+(https://storeedgefd.dsk.mp.microsoft.com). 
+
+https://github.com/microsoft/winget-cli
+https://github.com/microsoft/winget-pkgs
 
 
-I am always eager to take on new challenges and expand my skills and knowledge within our company.
+From CMd line: 
+Winget list: This command will give you the list of your installed software with information about any updates available or not. 
 
-To that end, I have updated my resume to reflect my current role and responsibilities, as well as any additional experience and skills that I have acquired since my last update. 
-Thank you in advance for your time and consideration. Please let me know if there is any further information I can provide or if you have any questions or concerns.
+Winget show 7zip.zip: This command will give you information about what is the installer type and it's properties of the 7zip applicaiton 
 
+Winget search 7zip.7zip: This command will give you information about what are the different installer types available that can be installed from Command line. 
+
+Winget search 9WZDNCRFJ3PZ: For company portal
+************************************************
