@@ -51,4 +51,6 @@ Winget show 7zip.zip: This command will give you information about what is the i
 Winget search 7zip.7zip: This command will give you information about what are the different installer types available that can be installed from Command line. 
 
 Winget search 9WZDNCRFJ3PZ: For company portal
+
+winget install -e --id 9WZDNCRFJ3PZ --accept-package-agreements --accept-source-agreements : This command will silently install the Company portal in the background, it requires Ms Store to be open. 
 ************************************************
