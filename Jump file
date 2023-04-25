@@ -1,3 +1,15 @@
+
+
+$regkeypath = "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment"
+$oldValue = (Get-ItemProperty $regkeypath).Path
+$removeString = "C:\temp\Igor"
+
+$newValue = $oldValue -replace [regex]::Escape($removeString) + ';'
+$newValue
+
+Set-ItemProperty -Path $regkeypath -Name "Path" -Value $newValue -Type string
+
+-------------------------------
 $oldPath = [Environment]::GetEnvironmentVariable("Path", [EnvironmentVariableTarget]::Machine)
 
 $newPath = $oldPath -split ";" | Where-Object { $_ -ne "C:\path\to\remove" } | Join-Path -Separator ";"
