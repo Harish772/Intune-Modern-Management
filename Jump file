@@ -1,3 +1,10 @@
+$oldPath = [Environment]::GetEnvironmentVariable("Path", [EnvironmentVariableTarget]::Machine)
+
+$newPath = $oldPath -split ";" | Where-Object { $_ -ne "C:\path\to\remove" } | Join-Path -Separator ";"
+
+[Environment]::SetEnvironmentVariable("Path", $newPath, [EnvironmentVariableTarget]::Machine)
+
+
 Win32 App Object for Reset from Company Portal: https://www.burgerhout.org/reset-your-device-with-a-simple-app/
 
 Teams Missing addin package : https://www.linkedin.com/pulse/case-missing-teams-add-arno-van-dijk/
