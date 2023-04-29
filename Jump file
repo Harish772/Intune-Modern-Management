@@ -1,22 +1,22 @@
+************************************************
+Entered on:04/29/23
+************************************************
 
+Get-assignments-of-a-device-via-powershell: https://jannikreinhard.com/2023/01/29/get-assignments-of-an-device-via-powershell/
 
-$regkeypath = "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment"
-$oldValue = (Get-ItemProperty $regkeypath).Path
-$removeString = "C:\temp\Igor"
+Create Store Apps New in Intune(For Arun): https://jannikreinhard.com/2022/12/11/deploy-windows-store-apps-via-intune/
 
-$newValue = $oldValue -replace [regex]::Escape($removeString) + ';'
-$newValue
+Get Network Endpoints for Intune: (invoke-restmethod -Uri (“https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM&clientrequestid=” + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls 
 
-Set-ItemProperty -Path $regkeypath -Name "Path" -Value $newValue -Type string
+Use this methodology for Installing SCCM Agent during AP Process: https://jannikreinhard.com/2022/10/02/how-to-skip-the-esp-for-a-single-app-installation/
 
--------------------------------
-$oldPath = [Environment]::GetEnvironmentVariable("Path", [EnvironmentVariableTarget]::Machine)
+Check Autopilot enrollment prerequisite: https://jannikreinhard.com/2022/08/24/check-autopilot-enrollment-prerequisite/
 
-$newPath = $oldPath -split ";" | Where-Object { $_ -ne "C:\path\to\remove" } | Join-Path -Separator ";"
+Check if your Device Traffic is going through Zscaler or not: https://www.nielskok.tech/intune/zscaler-custom-compliance-in-intune/
 
-[Environment]::SetEnvironmentVariable("Path", $newPath, [EnvironmentVariableTarget]::Machine)
+Chrome Extensions via Intune Win32 App: https://www.nielskok.tech/microsoft365/chrome-extension-via-win32app-in-intune/ 
 
-
+************************************************
 Win32 App Object for Reset from Company Portal: https://www.burgerhout.org/reset-your-device-with-a-simple-app/
 
 Teams Missing addin package : https://www.linkedin.com/pulse/case-missing-teams-add-arno-van-dijk/
@@ -38,9 +38,8 @@ Getting App ID from Intune for AP Troubleshooting: https://andrewstaylor.com/202
 Rename multiple devices in Intune with Graph and a CSV file: https://ugurkoc.de/rename-multiple-devices-in-intune-with-a-csv-file/
 
 Every Niche thing about Graph Permisssions: https://www.french365connection.co.uk/post/graph-sdk-permissions
-
-
 ************************************************
+
 Winget Stuff
 https://winget.run/
 
