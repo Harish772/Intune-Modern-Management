@@ -2,6 +2,18 @@
 Entered on:04/29/23
 ************************************************
 
+Get-AllIntunePoliciesFromAADGroup: https://github.com/timmyit/MEM/blob/main/Get-AllIntunePoliciesFromAADGroup
+
+Android Emulators: https://timmyit.com/2021/01/25/android-emulation-for-endpoint-manager-admins/
+
+AAD Dynamic Queries: https://timmyit.com/2020/07/09/azure-ad-dynamic-queries-for-intune-mem-administrators/
+
+Rename IOS Device: https://timmyit.com/2019/05/21/intune-rename-ios-devices-with-intune-powershell-sdk/
+
+************************************************
+Entered on:04/29/23
+************************************************
+
 Get-assignments-of-a-device-via-powershell: https://jannikreinhard.com/2023/01/29/get-assignments-of-an-device-via-powershell/
 
 Create Store Apps New in Intune(For Arun): https://jannikreinhard.com/2022/12/11/deploy-windows-store-apps-via-intune/
