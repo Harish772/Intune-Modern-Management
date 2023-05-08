@@ -2,6 +2,28 @@
 Entered on:04/29/23
 ************************************************
 
+Wallpaper as Win32 Applicaiton: https://ccmexec.com/2015/08/replacing-default-wallpaper-in-windows-10-using-scriptmdtsccm/
+
+Drill down into Patch Reports from WufB via Log Analytics: (40.56) https://www.youtube.com/watch?v=R2sLtd2fi-Y&ab_channel=ViaMonstraOnlineAcademy
+
+AP Shenanigans Rename
+
+Granualr AP deployment events: https://www.petervanderwoude.nl/post/working-with-windows-autopilot-deployment-events/
+
+Set Device Porperties using Powershell: https://powerstacks.com/index.html%3Fp=11306.html
+
+Drivers & Firmware with Powershell: https://euc365.com/post/driver-firmware-servicing-powershell-module/
+
+Set Wallpaper with Intune: https://ccmexec.com/2015/08/replacing-default-wallpaper-in-windows-10-using-scriptmdtsccm/
+
+SSO to On-Prem How?: https://call4cloud.nl/2021/03/deliver-us-from-hybrid/
+
+Install Graph X ray : THis will provide you the info on what is the relevant PS CMD that you can run on the device. 
+
+************************************************
+Entered on:04/29/23
+************************************************
+
 Get-AllIntunePoliciesFromAADGroup: https://github.com/timmyit/MEM/blob/main/Get-AllIntunePoliciesFromAADGroup
 
 Android Emulators: https://timmyit.com/2021/01/25/android-emulation-for-endpoint-manager-admins/
