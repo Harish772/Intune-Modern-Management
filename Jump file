@@ -2,6 +2,18 @@
 Entered on:05/13/23
 ************************************************
 Create Dynamic Groups in Intune: https://thedxt.ca/2023/04/intune-dynamic-device-groups/
+Andriod,
+IOS,
+Windows Default complaince policy. 
+
+And Complinace policy setting > If failed to meet complaince then do what? 
+
+
+
+Deploy Trusted sties via Intune: https://letsconfigmgr.com/mem-deploying-trusted-sites/
+Set DNS suffixes for AADJ Devices:https://mauvtek.com/home/so-we-are-still-talking-dns-suffix-for-azure-ad-join-devices
+Set DNS suffixes via Intune: https://letsconfigmgr.com/set-dns-suffixes-via-microsoft-intune/
+Install Apps via Intune after Autopilot: https://jannikreinhard.com/2022/10/02/how-to-skip-the-esp-for-a-single-app-installation/
 
 ************************************************
 Entered on:05/10/23
