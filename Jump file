@@ -1,3 +1,30 @@
+Dear Azul Team,
+
+I hope this email finds you well. I am writing to seek guidance on the best path forward for our app packaging process and the installation of Azul Zulu JDK 8U372. We value your expertise and would appreciate your input on the following matters:
+
+App Packaging:
+We are planning to package certain apps and make them available to our developers. Could you kindly advise us on the preferred approach for app packaging? We would like to ensure that the process is seamless and efficient.
+
+Java Installation:
+As part of our packaging plans, we intend to include Azul Zulu JDK 8U372. Should we uninstall the existing version of Oracle Java before proceeding with the installation? We would appreciate your guidance on whether it is preferable for Oracle and Azul Java to coexist on the same machine, or if it is recommended to uninstall the current version of Java before installing Azul Zulu JDK 8U372.
+
+Your expertise and insight would greatly assist us in making informed decisions regarding our app packaging and Java installation process. Thank you in advance for your support and guidance.
+
+We look forward to your response and appreciate your prompt attention to this matter. Please let us know the best way to proceed, and if there are any additional details or requirements we need to consider.
+
+Thank you and best regards,
+
+[Your Name]
+[Your Position/Title]
+[Your Contact Information]
+
+
+
+
+
+
+
+
 ************************************************
 Entered on:05/13/23
 ************************************************
