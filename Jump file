@@ -1,3 +1,17 @@
+
+************************************************
+Entered on:05/22/23
+************************************************
+Your broken Sid Answer (aka: Managing Local Admins on AADJ devices)- https://oceanleaf.ch/local-admin-privilege-management-with-intune/
+
+WHfB: https://msendpointmgr.com/2022/09/04/manage-windows-hello-for-business-whfb-with-intune/
+
+WHfB(More secure deployment method, but quite not sure if it is needed at all):https://brookspeppin.com/2021/08/13/how-to-setup-windows-hello-for-business-key-trust-method/
+
+Dsregcmd /status /debug
+
+Battery Health with Intune:https://msendpointmgr.com/2020/08/07/proactive-battery-replacement-with-endpoint-analytics/
+
 ************************************************
 Entered on:05/15/23
 ************************************************
