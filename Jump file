@@ -12,6 +12,10 @@ Dsregcmd /status /debug
 
 Battery Health with Intune:https://msendpointmgr.com/2020/08/07/proactive-battery-replacement-with-endpoint-analytics/
 
+AddUserToAADGroup.ps1 : https://github.com/MSB365/AzureADGroup-MGMT
+
+Office 365 Ports and Firewall Challenges: https://www.msb365.blog/?p=4268
+
 ************************************************
 Entered on:05/15/23
 ************************************************
