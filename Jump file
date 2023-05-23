@@ -16,6 +16,8 @@ AddUserToAADGroup.ps1 : https://github.com/MSB365/AzureADGroup-MGMT
 
 Office 365 Ports and Firewall Challenges: https://www.msb365.blog/?p=4268
 
+Windows Update Settings Compliance: https://msendpointmgr.com/2022/05/13/windows-update-settings-compliance/
+
 ************************************************
 Entered on:05/15/23
 ************************************************
@@ -150,6 +152,8 @@ https://github.com/microsoft/winget-pkgs
 
 
 From CMd line: 
+Winget --Info: Gives you information about the Winget Tool itself, where the logs are local cached installers are etc.,
+Winget --Source List: Give you information about the MSStore link and Github link where the manifest files are located at. 
 Winget list: This command will give you the list of your installed software with information about any updates available or not. 
 
 Winget show 7zip.zip: This command will give you information about what is the installer type and it's properties of the 7zip applicaiton 
@@ -159,4 +163,5 @@ Winget search 7zip.7zip: This command will give you information about what are t
 Winget search 9WZDNCRFJ3PZ: For company portal
 
 winget install -e --id 9WZDNCRFJ3PZ --accept-package-agreements --accept-source-agreements : This command will silently install the Company portal in the background, it requires Ms Store to be open. 
+winget install -Scope Machine -e --id 9WZDNCRFJ3PZ --accept-package-agreements --accept-source-agreements : Installs in System Context 
 ************************************************
