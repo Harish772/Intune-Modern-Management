@@ -164,4 +164,5 @@ Winget search 9WZDNCRFJ3PZ: For company portal
 
 winget install -e --id 9WZDNCRFJ3PZ --accept-package-agreements --accept-source-agreements : This command will silently install the Company portal in the background, it requires Ms Store to be open. 
 winget install -Scope Machine -e --id 9WZDNCRFJ3PZ --accept-package-agreements --accept-source-agreements : Installs in System Context 
+Trigger Winget.exe: https://gal.vin/posts/2022/win-package-managers/
 ************************************************
