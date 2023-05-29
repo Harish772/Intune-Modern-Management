@@ -96,6 +96,8 @@ Get-assignments-of-a-device-via-powershell: https://jannikreinhard.com/2023/01/2
 
 Create Store Apps New in Intune(For Arun): https://jannikreinhard.com/2022/12/11/deploy-windows-store-apps-via-intune/
 
+For Arun Detection script for Winget Based SCCM Apps: https://github.com/retsak/Scripts/blob/main/Get-WingetPackageVersion.ps1
+
 Get Network Endpoints for Intune: (invoke-restmethod -Uri (“https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM&clientrequestid=” + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls 
 
 Use this methodology for Installing SCCM Agent during AP Process: https://jannikreinhard.com/2022/10/02/how-to-skip-the-esp-for-a-single-app-installation/
