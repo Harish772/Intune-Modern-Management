@@ -10,6 +10,7 @@ Your broken Sid Answer (aka: Managing Local Admins on AADJ devices)- https://oce
 WHfB: https://msendpointmgr.com/2022/09/04/manage-windows-hello-for-business-whfb-with-intune/
 
 WHfB(More secure deployment method, but quite not sure if it is needed at all):https://brookspeppin.com/2021/08/13/how-to-setup-windows-hello-for-business-key-trust-method/
+Enable Windows Hello - Intune + PowerShell (This is Simple - but don't know if it provides access to on-Prem Resources): https://scloud.work/en/windows-hello-enabled/
 
 Dsregcmd /status /debug
 
