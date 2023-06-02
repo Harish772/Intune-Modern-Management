@@ -13,7 +13,7 @@ WHfB(More secure deployment method, but quite not sure if it is needed at all):h
 Enable Windows Hello - Intune + PowerShell (This is Simple - but don't know if it provides access to on-Prem Resources): https://scloud.work/en/windows-hello-enabled/
 
 Dsregcmd /status /debug
-
+Retry failed Apps Installation in Microsoft Intune: https://www.youtube.com/watch?v=gHG84MKE5O4&ab_channel=MSEndpointMgr-JunglingtheCloud
 Battery Health with Intune:https://msendpointmgr.com/2020/08/07/proactive-battery-replacement-with-endpoint-analytics/
 
 AddUserToAADGroup.ps1 : https://github.com/MSB365/AzureADGroup-MGMT
