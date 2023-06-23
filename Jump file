@@ -1,3 +1,21 @@
+
+
+
+Remove-AppxPackage : Deployment failed with HRESULT: 0x80073CF1, Package was not found.
+Windows cannot remove Microsoft.MSPaint_6.2009.30067.0_x64__8wekyb3d8bbwe because the current user does not have that package installed. Use Get-AppxPackage to see the 
+list of packages installed.
+NOTE: For additional information, look for [ActivityId] 513529d7-a5e2-0001-3c8c-3551e2a5d901 in the Event Log or use the command line Get-AppPackageLog -ActivityID 
+513529d7-a5e2-0001-3c8c-3551e2a5d901
+At line:1 char:49
++ Get-AppxPackage -AllUsers "Microsoft.Mspaint" | Remove-AppxPackage
++                                                 ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Microsoft.MSPai...__8wekyb3d8bbwe:String) [Remove-AppxPackage], PSInvalidOperationException
+    + FullyQualifiedErrorId : DeploymentError,Microsoft.Windows.Appx.PackageManager.Commands.RemoveAppxPackageCommand
+
+
+
+************************************************
+
 https://www.bleepingcomputer.com/news/microsoft/microsoft-outlook-is-disabling-teams-meeting-add-in-how-to-fix/
 https://www.linkedin.com/pulse/case-missing-teams-add-arno-van-dijk/
 https://seesmitty.com/how-to-deploy-a-registry-key-using-proactive-remediation/
