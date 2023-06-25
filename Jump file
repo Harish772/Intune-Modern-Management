@@ -8,6 +8,13 @@ How to package PKG MacOS Apps: https://seesmitty.com/how-to-package-macos-pkg-ap
 Pacakging Company portal to MacOS devices: https://www.youtube.com/watch?v=TzwCtD1mtJk&ab_channel=IntuneTraining
 Configure SSO for MacOS devices (Configuration Profiles): https://seesmitty.com/how-to-configure-microsoft-sso-for-macos-devices-in-mem/
 Configure Storage Sense(the Automatic stale file cleanup tool) in Windows via Intune: https://seesmitty.com/how-to-configure-storage-sense-for-windows/
+USB Restrictions in Intune (Deny all access to Removable Storage using Intune): https://rahuljindalmyit.blogspot.com/2023/02/deny-all-access-to-removable-storage.html
+Allow Specific USB Hardware ID classes in Intune (removable storage): https://rahuljindalmyit.blogspot.com/2021/10/the-fine-balance-between-device-control.html
+Creating a WIFI Profile in Intune for Windows devices via Configuration profile: https://www.prajwaldesai.com/create-a-wi-fi-profile-in-intune/
+Creating a WIFI Profile in Intune for Windows devices via OMA URI Settings: https://allthingscloud.blog/deploy-wifi-profile-with-pre-shared-key-to-windows-10-using-microsoft-intune/
+Best practices for WIFI Profile security in Intune: https://www.securew2.com/blog/intune-enterprise-wifi-profile-security
+Single App Kiosk Mode in Intune: https://www.youtube.com/watch?v=aVHT2jFlL_g&t=2s&ab_channel=IntuneMadeSimple
+Single App Kiosk Mode in Intune: https://www.systemcenterdudes.com/windows-10-intune-autopilot-kiosk-single-app/
 ************************************************
 
 https://www.bleepingcomputer.com/news/microsoft/microsoft-outlook-is-disabling-teams-meeting-add-in-how-to-fix/
