@@ -1,3 +1,16 @@
+# Define the path to your Batch file and the desired output file
+$batchFilePath = "C:\path\to\your\batchfile.bat"
+$outputFilePath = "C:\path\to\output\output.txt"
+
+# Start the Batch file using Start-Process
+Start-Process -FilePath "cmd.exe" -ArgumentList "/c $batchFilePath" -NoNewWindow -Wait
+
+# Capture the output of the Batch file using redirection
+& $batchFilePath > $outputFilePath
+
+# Display a message indicating the process is complete
+Write-Host "Batch file execution complete. Output saved to: $outputFilePath"
+-------------------------------------------
 function Remove-FolderContents {
     param (
         [string]$FolderPath
