@@ -1,3 +1,34 @@
+function Remove-FolderContents {
+    param (
+        [string]$FolderPath
+    )
+    
+    # Check if the folder exists
+    if (-not (Test-Path -Path $FolderPath -PathType Container)) {
+        Write-Host "Folder '$FolderPath' does not exist."
+        return
+    }
+    
+    # Check if the folder is empty
+    $isEmpty = @(Get-ChildItem -Path $FolderPath -Force) -eq $null
+    
+    if ($isEmpty) {
+        Write-Host "Folder '$FolderPath' is empty."
+    }
+    else {
+        # Remove all contents of the folder recursively
+        Write-Host "Removing contents of folder '$FolderPath'..."
+        Get-ChildItem -Path $FolderPath -Force | Remove-Item -Recurse -Force
+        Write-Host "All contents removed from folder '$FolderPath'."
+    }
+}
+
+# Replace "C:\path\to\your\folder" with the actual path of the folder you want to check and clear its contents.
+$folderPathToCheck = "C:\path\to\your\folder"
+
+# Call the function to check the folder and remove contents if not empty
+Remove-FolderContents -FolderPath $folderPathToCheck
+
 ************************************************
 Entered on:06/24/23
 **********************************************
