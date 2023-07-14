@@ -1,0 +1,106 @@
+Azul Zulu is a distribution of the OpenJDK (Java Development Kit) provided by Azul Systems. OpenJDK is an open-source implementation of the Java SE (Standard Edition) platform, which includes the Java programming language and a set of libraries and tools for developing Java applications.
+
+Azul Zulu is designed to provide high-quality and fully compatible builds of OpenJDK, suitable for use in various environments, including enterprise applications. It is available for multiple platforms, including Windows, macOS, Linux, and various cloud platforms.
+
+One of the main features of Azul Zulu is its focus on performance and scalability. Azul Systems is known for its expertise in Java runtime technologies and optimizations, and they apply these optimizations to their Zulu builds. This can result in improved performance and reduced latency for Java applications.
+
+Azul Zulu offers both free and commercial versions. The free versions include the OpenJDK builds and are suitable for most development and non-production use cases. The commercial versions provide additional features, support, and extended maintenance for organizations that require enterprise-level support and reliability.
+
+Overall, Azul Zulu provides a reliable and optimized distribution of OpenJDK, allowing developers and organizations to build and run Java applications with confidence.
+
+Sure! Here's an example FAQ document that you can provide to your developers:
+
+**Q1: What is Azul Zulu Java?**
+Azul Zulu Java is a distribution of the OpenJDK (Java Development Kit) provided by Azul Systems. It is a high-quality, fully compatible build of OpenJDK, optimized for performance and scalability.
+
+**Q2: Why are we transitioning from Oracle Java to Azul Zulu Java?**
+We are transitioning to Azul Zulu Java to leverage its performance optimizations and enterprise-level support. Azul Systems specializes in Java runtime technologies and provides extended maintenance and support services for their Java distributions.
+
+**Q3: How do I install Azul Zulu Java from the .Zip files?**
+To install Azul Zulu Java, follow these steps:
+1. Extract the contents of the .Zip file to a local directory on your machine.
+2. Set the `JAVA_HOME` environment variable to point to the installation directory.
+3. Update your system's `PATH` variable to include the `bin` directory within the installation directory.
+
+**Q4: Which Java versions are available in the .Zip files?**
+We have provided .Zip files for Java versions 8, 11, 17, and 21. Choose the appropriate version based on your application's requirements.
+
+**Q5: Can I have multiple versions of Azul Zulu Java installed on my machine?**
+Yes, you can have multiple versions of Azul Zulu Java installed. Ensure that you set the `JAVA_HOME` and `PATH` variables correctly to use the desired version.
+
+**Q6: How do I switch my application to use Azul Zulu Java?**
+To switch your application to use Azul Zulu Java, update the `JAVA_HOME` and `PATH` variables to point to the Azul Zulu Java installation directory. Ensure that your application's configuration refers to the correct Java version.
+
+**Q7: What if I encounter issues during testing with Azul Zulu Java?**
+If you encounter any issues while testing your web or desktop applications with Azul Zulu Java, you can reach out to our dedicated support engineers for assistance. Contact [Support Contact Details] for prompt help and issue resolution.
+
+**Q8: Can I continue using Oracle Java after the transition?**
+We recommend transitioning all applications to Azul Zulu Java. However, if there are specific dependencies or limitations that require Oracle Java, please consult with our support engineers for guidance on the best approach.
+
+**Q9: Are there any licensing considerations with Azul Zulu Java?**
+Azul Zulu Java is free to use for development and non-production purposes. If you require extended support and maintenance for production environments, consider upgrading to the commercial version of Azul Zulu Java.
+
+**Q10: Can I use Azul Zulu Java on different operating systems?**
+Yes, Azul Zulu Java is available for various operating systems, including Windows, macOS, and Linux. Ensure you download and install the correct version for your operating system.
+
+Certainly! Here are some additional FAQs for your Azul Zulu Java transition:
+
+**Q11: Can I migrate my existing Java code and libraries to Azul Zulu Java?**
+Yes, Azul Zulu Java is compatible with standard Java code and libraries. You should be able to migrate your existing codebase without any major modifications. However, it's always a good practice to test your applications thoroughly after the migration.
+
+**Q12: Are there any differences in behavior or APIs between Azul Zulu Java and Oracle Java?**
+Azul Zulu Java is based on the OpenJDK project, which aims to provide a consistent Java experience across different distributions. While the core APIs and behavior should remain the same, there might be minor implementation differences or bug fixes. It's recommended to perform testing to ensure compatibility with your specific applications.
+
+**Q13: How often will Azul Zulu Java receive updates and security patches?**
+Azul Systems provides regular updates and security patches for Azul Zulu Java. The frequency of updates may vary depending on the Java version and your chosen support plan. Stay updated with Azul Systems' release notes and announcements for information on the latest updates and patches.
+
+**Q14: Can I use Azul Zulu Java with my Integrated Development Environment (IDE) of choice?**
+Yes, Azul Zulu Java is compatible with popular IDEs like Eclipse, IntelliJ IDEA, and NetBeans. Make sure to update the Java runtime settings within your IDE to point to the Azul Zulu Java installation.
+
+**Q15: Does Azul Zulu Java support the same set of third-party libraries and frameworks as Oracle Java?**
+Azul Zulu Java supports a wide range of third-party libraries and frameworks, just like Oracle Java. However, it's always recommended to check the compatibility of specific libraries and frameworks with Azul Zulu Java, especially if they have any dependencies or platform-specific requirements.
+
+**Q16: Can I use Azul Zulu Java in a containerized environment (e.g., Docker)?**
+Yes, Azul Zulu Java is well-suited for containerized environments. It can be used within Docker containers or orchestrated using container management platforms like Kubernetes. Ensure that you choose the appropriate Azul Zulu Java version and follow best practices for containerized Java applications.
+
+**Q17: Is Azul Zulu Java certified for Java EE (Enterprise Edition) applications?**
+Azul Zulu Java is fully compatible with Java EE specifications. You can use it to run Java EE applications without any issues. However, keep in mind that starting from Java 11, Java EE has been replaced by Jakarta EE. Ensure you choose the appropriate version of Azul Zulu Java that aligns with your Jakarta EE requirements.
+
+**Q18: Can I use Azul Zulu Java for both development and production environments?**
+Azul Zulu Java is suitable for both development and production environments. However, if you require extended support, maintenance, and additional enterprise features, you may need to consider upgrading to the commercial version of Azul Zulu Java.
+
+**Q19: How can I stay informed about Azul Zulu Java updates and announcements?**
+You can stay informed about Azul Zulu Java updates by subscribing to Azul Systems' newsletters, following their official blog or social media channels, or visiting their website regularly. They often provide information about new releases, security patches, and performance improvements.
+
+**Q20: Is there any documentation or resources available for Azul Zulu Java?**
+Yes, Azul Systems provides comprehensive documentation, guides, and resources for Azul Zulu Java on their website. You can access installation guides, release notes, FAQs, and other helpful materials to assist you during the transition and usage of Azul Zulu Java.
+
+**Q21: Does Azul Zulu Java offer better performance compared to Oracle Java?**
+Azul Zulu Java is known for its performance optimizations, and in certain scenarios, it can provide improved performance compared to Oracle Java. However, the actual performance gains may vary depending on the specific use case and workload. It's recommended to conduct performance testing on your applications to evaluate the impact of the transition.
+
+**Q22: How can I uninstall or remove Azul Zulu Java from my system?**
+To uninstall Azul Zulu Java, you can delete the installation directory and remove any references to the `JAVA_HOME` and `PATH` environment variables that point to Azul Zulu Java. Additionally, ensure that your applications are configured to use a different Java installation if required.
+
+**Q23: Can I continue using my existing Java command-line tools and scripts with Azul Zulu Java?**
+Yes, your existing Java command-line tools and scripts should work seamlessly with Azul Zulu Java. Ensure that the `JAVA_HOME` and `PATH` variables are correctly set to point to the Azul Zulu Java installation so that the tools and scripts can find the appropriate Java runtime.
+
+**Q24: Is Azul Zulu Java compatible with Java frameworks like Spring and Hibernate?**
+Azul Zulu Java is compatible with popular Java frameworks like Spring, Hibernate, and others. These frameworks are designed to work with standard Java distributions, and Azul Zulu Java provides a compatible runtime environment. However, it's always a good practice to verify the compatibility and consult the framework's documentation for any specific considerations or requirements.
+
+**Q25: Are there any licensing restrictions or considerations for using Azul Zulu Java in a commercial environment?**
+Azul Zulu Java is generally free for development and non-production use. However, for commercial usage, there may be certain licensing considerations. It's recommended to review the licensing terms and consult with your legal department to ensure compliance with the license agreements for Azul Zulu Java.
+
+**Q26: Can I receive support for Azul Zulu Java from the Azul Systems support engineers during the transition?**
+Yes, we have dedicated support engineers available to assist you during the transition process. If you encounter any issues or need guidance while migrating to Azul Zulu Java, feel free to reach out to our support team at [Support Contact Details].
+
+**Q27: Can I use Azul Zulu Java with my existing build and deployment tools, such as Maven or Gradle?**
+Yes, Azul Zulu Java can be integrated with popular build and deployment tools like Maven or Gradle. Ensure that you update the necessary configuration files to use the appropriate Azul Zulu Java installation and verify compatibility with your specific tools and versions.
+
+**Q28: Does Azul Zulu Java offer any specific features or optimizations for cloud environments?**
+Azul Zulu Java is cloud-ready and provides optimizations for running Java applications in cloud environments. It supports integration with major cloud platforms and provides features like dynamic scaling, containerization support, and performance optimizations for cloud workloads.
+
+**Q29: Can I use Azul Zulu Java for Android application development?**
+Azul Zulu Java is primarily focused on Java SE (Standard Edition) development and may not be suitable for Android application development. Android uses a different runtime environment called ART (Android Runtime). For Android development, it's recommended to use the official Android SDK and the Java Development Kit (JDK) provided by Google.
+
+**Q30: Can I migrate my existing JVM (Java Virtual Machine) tuning parameters to Azul Zulu Java?**
+Yes, you can migrate your existing JVM tuning parameters to Azul Zulu Java. The same tuning options and flags that worked with Oracle Java should also work with Azul Zulu Java. However, it's recommended to review and validate the tuning parameters to ensure optimal performance with Azul Zulu Java.
