@@ -1,3 +1,29 @@
+
+************************************************
+Entered on:07/16/23
+**********************************************
+Google Mobile Services (GMS)/Google Play Store and Android Enterprise are not available in China. In countries/regions where GMS is not available, use device administrator to enroll devices in Intune. 
+
+Enroll Corporate owned Andriod Dedicated devices in China. RF
+The Probelm: Devices can't communincate with Intune Service in China and Google Mobile Services (GMS)/Google Play Store are not avilable in china. 
+
+Possbiel Solutions: 
+Device administrator enrollment
+Can Devices be enrolledinot Intune in Closer country and shipped themn out to china and can we manage it that way? 
+
+URLs to share it with the Team: 
+Managing Android Devices where Google Playstore is not available: https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793 
+How to use Intune in environments without Google Mobile Services: https://learn.microsoft.com/en-us/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable 
+
+Andriod Dedicated devices Security settings: https://learn.microsoft.com/en-us/mem/intune/enrollment/android-fully-managed-security-settings
+Android Open Source Project Supported Devices: https://learn.microsoft.com/en-us/mem/intune/fundamentals/android-os-project-supported-devices?source=recommendations
+
+Intune operated by 21Vianet in China  https://learn.microsoft.com/en-us/mem/intune/fundamentals/china.
+
+Android"S Website on Enterprise Management: https://www.android.com/enterprise/management/
+
+Andriod Device Adminstrator: https://learn.microsoft.com/en-us/mem/intune/enrollment/android-enroll-device-administrator
+
 ************************************************
 Entered on:06/24/23
 **********************************************
