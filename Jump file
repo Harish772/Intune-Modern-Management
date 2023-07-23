@@ -2,6 +2,12 @@
 ************************************************
 Entered on:07/16/23
 **********************************************
+RBAC in Intune: https://vmlabblog.com/2021/01/implementing-rbac-in-intune/
+
+Network Drive Mapping with Intune: https://www.anoopcnair.com/managing-network-drive-mappings-with-intune/
+
+Understanding Bitlocker Compliance policy using Intune: https://www.anoopcnair.com/bitlocker-compliance-policy-using-intune/ 
+
 Google Mobile Services (GMS)/Google Play Store and Android Enterprise are not available in China. In countries/regions where GMS is not available, use device administrator to enroll devices in Intune. 
 
 Enroll Corporate owned Andriod Dedicated devices in China. RF
