@@ -1,4 +1,36 @@
+************************************************
+Entered on:07/28/23
+**********************************************
+## Gives you info about the Version of Graph you are communicating with.
+Get-MGProfile 
 
+
+## Changes the Version of Graph that you want to communicate with.
+Select-MGProfile - Name "beta"
+ 
+
+## We can set the permission our sesion we wil have when we connect. 
+ TO do this we will first need to know the commands we need to run
+
+#Find the permission available
+Find-mggraphcommand -command Get-mggroup | Select -first 1 -expandproperty Permissions
+
+ # For Expample we wnat to create and update a group so the best match is Group.readWrite.All
+
+Find-mggraphcommand -command Get-mguser | Select -first 1 -expandproperty Permissions
+
+# For Expample we wnat to create and update a group so the best match is User.read.All
+
+# Now that we know the permisions needed. (THeriry of least permissions) 
+So we are granting the rights we need - AKA passing in the permissions we need. 
+
+COnnect-mggraph -scope "Group.readWrite.All", "User.read.All"
+
+Now all your subsequent Graph cmdlets will work. 
+
+Get-MGGroup, Get-MGDevice, Get-GMDevice etcc etc..
+ 
+ 
 ************************************************
 Entered on:07/16/23
 **********************************************
