@@ -1,7 +1,11 @@
 Lock screen & wallpaper with Intune: https://osddeployment.dk/2019/04/14/how-to-set-windows-10-lock-screen-and-background-picture-with-intune/
 Enable Languagae Packs on Autopilot Devices:https://memv.ennbee.uk/posts/windows-autopilot-languages/
 
+Configure Applocker via Inunte:https://www.youtube.com/watch?v=CnaoET4gt5A&ab_channel=Intune%26VitaDoctrina
 
+Azure Log Analytics, Intune Data Warehouse, Custom Reporting in Intune, KQl Queries & creating Log Analytics workbooks: https://www.youtube.com/watch?v=JOYcOmJOk6k&ab_channel=DamienVanRobaeys
+
+Co-Management Moving Workloads to Intune: https://www.youtube.com/watch?v=1IVC2q-LDQk&ab_channel=PatchMyPC (22:33 info about Resource Access policies)
 
 
 Lock Screen Images with Intune: https://www.imab.dk/moving-away-from-group-policy-and-set-wallpaper-and-lock-screen-images-with-local-source-files-with-microsoft-endpoint-manager-intune/
