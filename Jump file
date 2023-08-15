@@ -1,3 +1,25 @@
+This is just a brain dump of the topics or ideas I have let’s have this meeting as a brain stoning session and come up with some action items in the end . 
+
+
+The pilot deployment of Java discovery script is deployed out to 20 developer systems and our plan is to go for broader deployment in the coming weeks so that we can have some concrete data to talk about. 
+
+
+
+Azul releases updates every quarter 
+
+Hcsc azul project team decided to push out updates semi annual 2 times in a year, 
+
+Package latest but packaging request show older dates 
+
+Since all the diff vers of oracle and azul  can coexist on the same machine azul indicated the safest route is to with first two features selected 
+Once we are fully azul then we can select 3rd feature to all prod 
+
+
+Current approach is like for like cutover, and the developers swill also perform a version upgrade latest 
+
+Only Ecm app will be deployed everywhere all other ones will just be made available to those who need it
+-----
+
 Areas that needs imporvement on AADJ Machines. 
 
 Validate the full list of Apps needed on AADJ Machines (Replace "New" with Something meaningful - Version Number?)
