@@ -1,3 +1,22 @@
+Areas that needs imporvement on AADJ Machines. 
+
+Validate the full list of Apps needed on AADJ Machines (Replace "New" with Something meaningful - Version Number?)
+Bring Uniformity in M365 Win32 App Object Names in Intune. 
+Configuration Profiles: 
+Convert the PS Script Store Unpin to Configuration profile/ProActive Remediation
+Convert the PS Script GL_CCW_Admins to ProActive Remediation
+Validate the Endpoint Security Profile GL_CCW_Admins on AADJ Machines
+Validate OneDrive Agents on AADJ are able to report their Health Status to SCJ Tenant and that the M365 Admins can see the sync status in their Admin Portals. 
+Create Configuration Profiles to mimic the Microsoft Store GPOs in Intune
+Direction on ZPA Tunnel How to enable and validate it. 
+Setup profiles via HPConnect to enforce BIOS Settings, BIOS Password and BIOS Update policies. 
+Setup Profiles in Intune to leverage HPCMSL for updating the Drivers on HP AADJ devices. 
+Ensure the Telemetry information is properly forwarded to Log Analytics workspace and solidfy the process for WUfB policies for AADJ Machines. Determine the process for Rollback as well. 
+Solidfy the process for Edge & M365 App Updates via CDN.
+CA Policies
+LockScreen and Wallpaper
+ 
+
 Lock screen & wallpaper with Intune: https://osddeployment.dk/2019/04/14/how-to-set-windows-10-lock-screen-and-background-picture-with-intune/
 Enable Languagae Packs on Autopilot Devices:https://memv.ennbee.uk/posts/windows-autopilot-languages/
 
