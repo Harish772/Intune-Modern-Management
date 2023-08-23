@@ -1,43 +1,3 @@
-This is just a brain dump of the topics or ideas I have let’s have this meeting as a brain stoning session and come up with some action items in the end . 
-
-
-The pilot deployment of Java discovery script is deployed out to 20 developer systems and our plan is to go for broader deployment in the coming weeks so that we can have some concrete data to talk about. 
-
-
-
-Azul releases updates every quarter 
-
-Hcsc azul project team decided to push out updates semi annual 2 times in a year, 
-
-Package latest but packaging request show older dates 
-
-Since all the diff vers of oracle and azul  can coexist on the same machine azul indicated the safest route is to with first two features selected 
-Once we are fully azul then we can select 3rd feature to all prod 
-
-
-Current approach is like for like cutover, and the developers swill also perform a version upgrade latest 
-
-Only Ecm app will be deployed everywhere all other ones will just be made available to those who need it
------
-
-Areas that needs imporvement on AADJ Machines. 
-
-Validate the full list of Apps needed on AADJ Machines (Replace "New" with Something meaningful - Version Number?)
-Bring Uniformity in M365 Win32 App Object Names in Intune. 
-Configuration Profiles: 
-Convert the PS Script Store Unpin to Configuration profile/ProActive Remediation
-Convert the PS Script GL_CCW_Admins to ProActive Remediation
-Validate the Endpoint Security Profile GL_CCW_Admins on AADJ Machines
-Validate OneDrive Agents on AADJ are able to report their Health Status to SCJ Tenant and that the M365 Admins can see the sync status in their Admin Portals. 
-Create Configuration Profiles to mimic the Microsoft Store GPOs in Intune
-Direction on ZPA Tunnel How to enable and validate it. 
-Setup profiles via HPConnect to enforce BIOS Settings, BIOS Password and BIOS Update policies. 
-Setup Profiles in Intune to leverage HPCMSL for updating the Drivers on HP AADJ devices. 
-Ensure the Telemetry information is properly forwarded to Log Analytics workspace and solidfy the process for WUfB policies for AADJ Machines. Determine the process for Rollback as well. 
-Solidfy the process for Edge & M365 App Updates via CDN.
-CA Policies
-LockScreen and Wallpaper
- 
 
 Lock screen & wallpaper with Intune: https://osddeployment.dk/2019/04/14/how-to-set-windows-10-lock-screen-and-background-picture-with-intune/
 Enable Languagae Packs on Autopilot Devices:https://memv.ennbee.uk/posts/windows-autopilot-languages/
@@ -168,15 +128,7 @@ Edge Extentions: https://www.imab.dk/install-google-chrome-extensions-using-micr
 Entered on:05/13/23
 ************************************************
 Create Dynamic Groups in Intune: https://thedxt.ca/2023/04/intune-dynamic-device-groups/
-Andriod,
-IOS,
-Windows Default complaince policy. 
-
-And Complinace policy setting > If failed to meet complaince then do what? 
-
 Intune Debug Toolkit: https://msendpointmgr.com/intune-debug-toolkit/
-
-
 Deploy Trusted sties via Intune: https://letsconfigmgr.com/mem-deploying-trusted-sites/
 Set DNS suffixes for AADJ Devices:https://mauvtek.com/home/so-we-are-still-talking-dns-suffix-for-azure-ad-join-devices
 Set DNS suffixes via Intune: https://letsconfigmgr.com/set-dns-suffixes-via-microsoft-intune/
@@ -202,8 +154,6 @@ Wallpaper as Win32 Applicaiton: https://ccmexec.com/2015/08/replacing-default-wa
 
 Drill down into Patch Reports from WufB via Log Analytics: (40.56) https://www.youtube.com/watch?v=R2sLtd2fi-Y&ab_channel=ViaMonstraOnlineAcademy
 
-AP Shenanigans Rename
-
 Granualr AP deployment events: https://www.petervanderwoude.nl/post/working-with-windows-autopilot-deployment-events/
 
 Set Device Porperties using Powershell: https://powerstacks.com/index.html%3Fp=11306.html
@@ -219,8 +169,6 @@ Install Graph X ray : THis will provide you the info on what is the relevant PS 
 ************************************************
 Entered on:04/29/23
 ************************************************
-
-Get-AllIntunePoliciesFromAADGroup: https://github.com/timmyit/MEM/blob/main/Get-AllIntunePoliciesFromAADGroup
 
 Android Emulators: https://timmyit.com/2021/01/25/android-emulation-for-endpoint-manager-admins/
 
