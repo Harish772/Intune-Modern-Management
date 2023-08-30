@@ -106,6 +106,7 @@ WHfB: https://msendpointmgr.com/2022/09/04/manage-windows-hello-for-business-whf
 
 WHfB(More secure deployment method, but quite not sure if it is needed at all):https://brookspeppin.com/2021/08/13/how-to-setup-windows-hello-for-business-key-trust-method/
 Enable Windows Hello - Intune + PowerShell (This is Simple - but don't know if it provides access to on-Prem Resources): https://scloud.work/en/windows-hello-enabled/
+Enable Windows Hello by leveraging the Hybrid Cloud Trust model: https://scloud.work/windows-hello-for-business-cloud-trust-hybrid/
 
 Dsregcmd /status /debug
 Retry failed Apps Installation in Microsoft Intune: https://www.youtube.com/watch?v=gHG84MKE5O4&ab_channel=MSEndpointMgr-JunglingtheCloud
