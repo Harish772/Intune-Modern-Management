@@ -1,3 +1,7 @@
+Intune Management Extension Deepdive: https://github.com/smcallister594/memugscotland/blob/main/MEMUGScotland-Resources/Slides/2023/31st-August/Intune%20Management%20Extension%20Deep%20Dive.pptx
+
+Intune Debug Toolkit: https://msendpointmgr.com/intune-debug-toolkit/
+
 Intune Wipe vs Fresh Start difference: https://blog.skymadesimple.io/intune-wipe-vs-fresh-start/
 
 Zero Trust Architecuture: https://blog.skymadesimple.io/we-need-to-talk-about-zero-trust-its-necessary/
@@ -16,39 +20,6 @@ Update Drivers on HP using Proactive Remediation: https://scloud.work/hp-driver-
 
 Lock Screen Images with Intune: https://www.imab.dk/moving-away-from-group-policy-and-set-wallpaper-and-lock-screen-images-with-local-source-files-with-microsoft-endpoint-manager-intune/
 
-************************************************
-Entered on:07/28/23
-**********************************************
-## Gives you info about the Version of Graph you are communicating with.
-Get-MGProfile 
-
-
-## Changes the Version of Graph that you want to communicate with.
-Select-MGProfile - Name "beta"
- 
-
-## We can set the permission our sesion we wil have when we connect. 
- TO do this we will first need to know the commands we need to run
-
-#Find the permission available
-Find-mggraphcommand -command Get-mggroup | Select -first 1 -expandproperty Permissions
-
- # For Expample we wnat to create and update a group so the best match is Group.readWrite.All
-
-Find-mggraphcommand -command Get-mguser | Select -first 1 -expandproperty Permissions
-
-# For Expample we wnat to create and update a group so the best match is User.read.All
-
-# Now that we know the permisions needed. (THeriry of least permissions) 
-So we are granting the rights we need - AKA passing in the permissions we need. 
-
-COnnect-mggraph -scope "Group.readWrite.All", "User.read.All"
-
-Now all your subsequent Graph cmdlets will work. 
-
-Get-MGGroup, Get-MGDevice, Get-GMDevice etcc etc..
- 
- 
 ************************************************
 Entered on:07/16/23
 **********************************************
@@ -170,8 +141,6 @@ Set Wallpaper with Intune: https://ccmexec.com/2015/08/replacing-default-wallpap
 
 SSO to On-Prem How?: https://call4cloud.nl/2021/03/deliver-us-from-hybrid/
 
-Install Graph X ray : THis will provide you the info on what is the relevant PS CMD that you can run on the device. 
-
 ************************************************
 Entered on:04/29/23
 ************************************************
@@ -221,13 +190,7 @@ Finding devices (and details) assigned to a user in Intune: https://andrewstaylo
 
 Getting App ID from Intune for AP Troubleshooting: https://andrewstaylor.com/2021/09/29/getting-app-id-from-intune/
 
-Rename multiple devices in Intune with Graph and a CSV file: https://ugurkoc.de/rename-multiple-devices-in-intune-with-a-csv-file/
 
-Every Niche thing about Graph Permisssions: https://www.french365connection.co.uk/post/graph-sdk-permissions
-
-How to Use -Filter with Microsoft Graph PowerShell: https://ourcloudnetwork.com/how-to-use-filter-with-microsoft-graph-powershell/
-
-Find out Effective Graph Permisssions: https://ourcloudnetwork.com/how-to-find-permissions-for-microsoft-graph-powershell/
 ************************************************
 
 Winget Stuff
@@ -267,3 +230,44 @@ winget install -Scope Machine -e --id 9WZDNCRFJ3PZ --accept-package-agreements -
 Trigger Winget.exe: https://gal.vin/posts/2022/win-package-managers/
 Scheduled Task for Appx Apps Updates: https://social.technet.microsoft.com/Forums/windows/en-US/5ac7daa9-54e6-43c0-9746-293dcb8ef2ec/how-to-force-update-of-windows-store-apps-without-launching-the-store-app?forum=win10itprosetup
 ************************************************
+Graph
+************************************************
+
+## Gives you info about the Version of Graph you are communicating with.
+Get-MGProfile 
+
+
+## Changes the Version of Graph that you want to communicate with.
+Select-MGProfile - Name "beta"
+ 
+
+## We can set the permission our sesion we wil have when we connect. 
+ TO do this we will first need to know the commands we need to run
+
+#Find the permission available
+Find-mggraphcommand -command Get-mggroup | Select -first 1 -expandproperty Permissions
+
+ # For Expample we wnat to create and update a group so the best match is Group.readWrite.All
+
+Find-mggraphcommand -command Get-mguser | Select -first 1 -expandproperty Permissions
+
+# For Expample we wnat to create and update a group so the best match is User.read.All
+
+# Now that we know the permisions needed. (THeriry of least permissions) 
+So we are granting the rights we need - AKA passing in the permissions we need. 
+
+COnnect-mggraph -scope "Group.readWrite.All", "User.read.All"
+
+Now all your subsequent Graph cmdlets will work. 
+
+Get-MGGroup, Get-MGDevice, Get-GMDevice etcc etc..
+
+Rename multiple devices in Intune with Graph and a CSV file: https://ugurkoc.de/rename-multiple-devices-in-intune-with-a-csv-file/
+
+Every Niche thing about Graph Permisssions: https://www.french365connection.co.uk/post/graph-sdk-permissions
+
+How to Use -Filter with Microsoft Graph PowerShell: https://ourcloudnetwork.com/how-to-use-filter-with-microsoft-graph-powershell/
+
+Find out Effective Graph Permisssions: https://ourcloudnetwork.com/how-to-find-permissions-for-microsoft-graph-powershell/
+
+Install Graph X ray : THis will provide you the info on what is the relevant PS CMD that you can run on the device. 
