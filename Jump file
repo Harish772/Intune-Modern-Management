@@ -1,3 +1,5 @@
+Justification: In the justification tab of the ServiceNow change request, I will explain that deploying Azul Java JDK v8 via SCCM to developers' machines is essential for a seamless cutover from Oracle JDK to Azul JDK. This transition will not involve any configuration changes to the users' systems, ensuring a smooth and disruption-free experience. It is critical to maintain application compatibility, security, and performance, and this update aligns with our technology strategy, enabling developers to work efficiently with the new Java environment.
+-----------------------------
 Disable first sign-in animation: https://skotheimsvik.no/the-ultimate-guide-to-intune-powered-windows-11-shared-devices
 
 Autopilot Import GUI: https://ugurkoc.de/autopilot-import-gui/
