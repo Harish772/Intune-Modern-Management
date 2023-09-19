@@ -1,4 +1,17 @@
-Justification: In the justification tab of the ServiceNow change request, I will explain that deploying Azul Java JDK v8 via SCCM to developers' machines is essential for a seamless cutover from Oracle JDK to Azul JDK. This transition will not involve any configuration changes to the users' systems, ensuring a smooth and disruption-free experience. It is critical to maintain application compatibility, security, and performance, and this update aligns with our technology strategy, enabling developers to work efficiently with the new Java environment.
+Setting up Update OS as a Win32 app ( PSWindowsUpdate PowerShell module) in Autopilot: https://oofhours.com/2020/05/18/two-for-one-updated-autopilot-branding-and-update-os-scripts/ 
+
+Autopilot Diagnostics Digging Deeper: 
+https://oofhours.com/2020/07/12/windows-autopilot-diagnostics-digging-deeper/
+
+
+Run the command w32tm /resync /force to sync the time with the default time server (time.windows.com).
+
+start ms-settings:
+start ms-availablenetworks:
+start http://www.msn.com
+
+Troubleshooting Guide for Windows Autopilot: https://oofhours.com/2019/10/08/troubleshooting-windows-autopilot-a-reference/
+
 -----------------------------
 Disable first sign-in animation: https://skotheimsvik.no/the-ultimate-guide-to-intune-powered-windows-11-shared-devices
 
