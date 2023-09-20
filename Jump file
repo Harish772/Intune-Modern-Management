@@ -1,3 +1,31 @@
+# Define the registry path and key to remove
+$RegistryPath = "Software\Microsoft\Windows\CurrentVersion\Run"
+$EntryName = "Lync"
+
+# Get a list of all user profiles on the system
+$UserProfiles = Get-WmiObject Win32_UserProfile | Where-Object { $_.Special -eq $false }
+
+# Loop through each user profile and remove the registry entry
+foreach ($UserProfile in $UserProfiles) {
+    $SID = $UserProfile.LocalPath.Split('\')[-1]
+
+    # Construct the full registry path for the user
+    $UserRegistryPath = "Registry::HKEY_USERS\$SID\$RegistryPath"
+
+    # Check if the registry entry exists before attempting to remove it
+    if (Test-Path "$UserRegistryPath\$EntryName") {
+        # Remove the registry entry
+        Remove-ItemProperty -Path $UserRegistryPath -Name $EntryName -ErrorAction SilentlyContinue
+        Write-Host "Removed '$EntryName' from user $SID"
+    }
+    else {
+        Write-Host "'$EntryName' not found for user $SID"
+    }
+}
+
+Write-Host "Registry cleanup completed."
+--------------------
+
 Setting up Update OS as a Win32 app ( PSWindowsUpdate PowerShell module) in Autopilot: https://oofhours.com/2020/05/18/two-for-one-updated-autopilot-branding-and-update-os-scripts/ 
 
 Autopilot Diagnostics Digging Deeper: 
