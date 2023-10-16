@@ -1,47 +1,19 @@
-
-Dear [Manager's Name],
-
-I hope this email finds you well. I wanted to discuss my current status as a contractor and the progress towards my Full-Time Equivalent (FTE) conversion.
-
-I appreciate the opportunities I've had while working here as a contractor and have enjoyed contributing to the team and the projects we've been working on. However, I have been patiently waiting for a while now to see progress towards an FTE conversion, and I haven't seen any significant movement in that direction.
-
-I understand that the conversion process can take some time, but I had initially hoped for a more definitive timeline or at least some communication about the status of my conversion. Given the lack of clarity and the uncertainty regarding when or if this will happen, I have decided that it is in my best interest to explore other opportunities.
-
-With that said, I would like to provide my two weeks' notice, effective [Last Working Day], as per the terms of my contract. This should provide ample time for a smooth transition and to wrap up any pending work or projects. I will make sure to hand over all necessary documentation and assist in training my replacement, if required.
-
-I want to express my gratitude for the time I've spent here, and I have learned a lot from my colleagues and the experiences I've had. I believe this decision is the best course of action for my career growth, and I hope you understand my perspective.
-
-Thank you for your understanding, and I look forward to a productive final two weeks here at [Company Name].
----------------------------
-
-# Define the registry path and key to remove
-$RegistryPath = "Software\Microsoft\Windows\CurrentVersion\Run"
-$EntryName = "Lync"
-
-# Get a list of all user profiles on the system
-$UserProfiles = Get-WmiObject Win32_UserProfile | Where-Object { $_.Special -eq $false }
-
-# Loop through each user profile and remove the registry entry
-foreach ($UserProfile in $UserProfiles) {
-    $SID = $UserProfile.LocalPath.Split('\')[-1]
-
-    # Construct the full registry path for the user
-    $UserRegistryPath = "Registry::HKEY_USERS\$SID\$RegistryPath"
-
-    # Check if the registry entry exists before attempting to remove it
-    if (Test-Path "$UserRegistryPath\$EntryName") {
-        # Remove the registry entry
-        Remove-ItemProperty -Path $UserRegistryPath -Name $EntryName -ErrorAction SilentlyContinue
-        Write-Host "Removed '$EntryName' from user $SID"
-    }
-    else {
-        Write-Host "'$EntryName' not found for user $SID"
-    }
-}
-
-Write-Host "Registry cleanup completed."
 --------------------
+Using Intune to configure a Scheduled Task to start a service at User logon: https://rahuljindalmyit.blogspot.com/2021/05/using-intune-to-configure-scheduled.html
 
+Intune: Desktop & Start menu customizations: https://rahuljindalmyit.blogspot.com/2021/01/intune-desktop-start-menu-customizations.html
+
+
+Intune Deploy Default Taskbar: https://thedxt.ca/2023/09/intune-deploy-default-taskbar/
+
+Get all assigned Intune policies and apps from a Microsoft Entra group: https://timmyit.com/2023/10/09/get-all-assigned-intune-policies-and-apps-from-a-microsoft-entra-group/
+
+Android emulation for endpoint Manager Admins: https://timmyit.com/2021/01/25/android-emulation-for-endpoint-manager-admins/
+
+Community Repository for ProActive Remediations: https://github.com/JayRHa/EndpointAnalyticsRemediationScripts/tree/main
+
+Get-IntuneManagementExtensionDiagnostics : https://github.com/petripaavola/Get-IntuneManagementExtensionDiagnostics
+--------------------------------
 Setting up Update OS as a Win32 app ( PSWindowsUpdate PowerShell module) in Autopilot: https://oofhours.com/2020/05/18/two-for-one-updated-autopilot-branding-and-update-os-scripts/ 
 
 Autopilot Diagnostics Digging Deeper: 
