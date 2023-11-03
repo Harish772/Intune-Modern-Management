@@ -1,4 +1,36 @@
 --------------------
+# Define the path to your CSV file
+$csvPath = "C:\Path\to\your\input\file.csv"
+
+# Read the CSV file
+$csvData = Import-Csv -Path $csvPath
+
+# Initialize counters
+$totalCount = $csvData.Count
+$completedCount = 0
+
+# Loop through each row in the CSV and update Column B
+foreach ($row in $csvData) {
+    $machine = $row.'Column A'  # Replace 'Column A' with the actual column name
+
+    # Run the PowerShell command to get Intune Device ID
+    $intuneDevice = Get-IntuneManagedDevice | Get-MSGraphAllPages | Where-Object {$_.deviceName -eq $machine} | Select-Object deviceName, id
+
+    if ($intuneDevice) {
+        $row.'Column B' = $intuneDevice.id  # Replace 'Column B' with the actual column name
+    } else {
+        $row.'Column B' = "Device not found"  # Replace with an appropriate message if the device is not found
+    }
+
+    $completedCount++
+    Write-Host "Completed $completedCount out of $totalCount devices. Proceeding onto next... $machine"
+}
+
+# Save the updated CSV data back to the file
+$csvData | Export-Csv -Path $csvPath -NoTypeInformation
+
+Write-Host "CSV file updated with Intune Device IDs."
+--------------------
 Using Intune to configure a Scheduled Task to start a service at User logon: https://rahuljindalmyit.blogspot.com/2021/05/using-intune-to-configure-scheduled.html
 
 Intune: Desktop & Start menu customizations: https://rahuljindalmyit.blogspot.com/2021/01/intune-desktop-start-menu-customizations.html
