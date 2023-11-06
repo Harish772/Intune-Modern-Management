@@ -5,23 +5,35 @@ $targetFile = "File.txt"
 # Define the log file path
 $logFile = "C:\Path\To\Your\LogFile.txt"
 
+# Define folders to exclude from the search
+$excludeFolders = @(
+    "C:\Path\To\Exclude\Folder1",
+    "C:\Path\To\Exclude\Folder2",
+    "C:\Path\To\Exclude\Folder3"
+)
+
 # Create the log file if it doesn't exist
 if (-not (Test-Path $logFile)) {
     New-Item -Path $logFile -ItemType File
 }
 
-# Search the entire C:\ drive for the target file
-Get-ChildItem -Path "C:\" -Filter $targetFile -File -Recurse | ForEach-Object {
+# Search the entire C:\ drive, including hidden files and folders, for the target file
+Get-ChildItem -Path "C:\" -Filter $targetFile -File -Recurse -Force -Hidden | ForEach-Object {
     $file = $_.FullName
-    # Attempt to delete the file and catch any errors
-    try {
-        Remove-Item $file -Force -ErrorAction Stop
-        "File found and deleted: $file" | Out-File -Append $logFile
-        Write-Host "File $file deleted."
-    } catch {
-        $errorMessage = "Error deleting file $file: $($_.Exception.Message)"
-        $errorMessage | Out-File -Append $logFile
-        Write-Host $errorMessage
+    $folderPath = (Get-Item -Path $file).DirectoryName
+
+    # Check if the folder should be excluded
+    if ($excludeFolders -notcontains $folderPath) {
+        # Attempt to delete the file and catch any errors
+        try {
+            Remove-Item $file -Force -ErrorAction Stop
+            "File found and deleted: $file" | Out-File -Append $logFile
+            Write-Host "File $file deleted."
+        } catch {
+            $errorMessage = "Error deleting file $file: $($_.Exception.Message)"
+            $errorMessage | Out-File -Append $logFile
+            Write-Host $errorMessage
+        }
     }
 }
 
