@@ -1,35 +1,30 @@
 --------------------
-# Define the path to your CSV file
-$csvPath = "C:\Path\to\your\input\file.csv"
+# Define the file to search for
+$targetFile = "File.txt"
 
-# Read the CSV file
-$csvData = Import-Csv -Path $csvPath
+# Define the log file path
+$logFile = "C:\Path\To\Your\LogFile.txt"
 
-# Initialize counters
-$totalCount = $csvData.Count
-$completedCount = 0
-
-# Loop through each row in the CSV and update Column B
-foreach ($row in $csvData) {
-    $machine = $row.'Column A'  # Replace 'Column A' with the actual column name
-
-    # Run the PowerShell command to get Intune Device ID
-    $intuneDevice = Get-IntuneManagedDevice | Get-MSGraphAllPages | Where-Object {$_.deviceName -eq $machine} | Select-Object deviceName, id
-
-    if ($intuneDevice) {
-        $row.'Column B' = $intuneDevice.id  # Replace 'Column B' with the actual column name
-    } else {
-        $row.'Column B' = "Device not found"  # Replace with an appropriate message if the device is not found
-    }
-
-    $completedCount++
-    Write-Host "Completed $completedCount out of $totalCount devices. Proceeding onto next... $machine"
+# Create the log file if it doesn't exist
+if (-not (Test-Path $logFile)) {
+    New-Item -Path $logFile -ItemType File
 }
 
-# Save the updated CSV data back to the file
-$csvData | Export-Csv -Path $csvPath -NoTypeInformation
+# Search the entire C:\ drive for the target file
+Get-ChildItem -Path "C:\" -Filter $targetFile -File -Recurse | ForEach-Object {
+    $file = $_.FullName
+    # Attempt to delete the file and catch any errors
+    try {
+        Remove-Item $file -Force -ErrorAction Stop
+        "File found and deleted: $file" | Out-File -Append $logFile
+        Write-Host "File $file deleted."
+    } catch {
+        $errorMessage = "Error deleting file $file: $($_.Exception.Message)"
+        $errorMessage | Out-File -Append $logFile
+        Write-Host $errorMessage
+    }
+}
 
-Write-Host "CSV file updated with Intune Device IDs."
 --------------------
 Using Intune to configure a Scheduled Task to start a service at User logon: https://rahuljindalmyit.blogspot.com/2021/05/using-intune-to-configure-scheduled.html
 
