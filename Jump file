@@ -1,41 +1,11 @@
 --------------------
-# Define the file to search for
-$targetFile = "File.txt"
+Quick Assist - Allow the admin to type in the Password in UAC Box on the remote system: https://www.pathumudana.com/2023/11/improve-experience-with-quick-assist.html
 
-# Define the log file path
-$logFile = "C:\Path\To\Your\LogFile.txt"
+One Drive Known Folder Move(KFM): https://tech.nicolonsky.ch/onedrive-known-folder-move-ms-intune/
 
-# Define folders to exclude from the search
-$excludeFolders = @(
-    "C:\Path\To\Exclude\Folder1",
-    "C:\Path\To\Exclude\Folder2",
-    "C:\Path\To\Exclude\Folder3"
-)
+PowerShell Script Test Open TCP Ports: https://tech.nicolonsky.ch/power-shell-script-test-open-tcp-ports/
 
-# Create the log file if it doesn't exist
-if (-not (Test-Path $logFile)) {
-    New-Item -Path $logFile -ItemType File
-}
-
-# Search the entire C:\ drive, including hidden files and folders, for the target file
-Get-ChildItem -Path "C:\" -Filter $targetFile -File -Recurse -Force -Hidden | ForEach-Object {
-    $file = $_.FullName
-    $folderPath = (Get-Item -Path $file).DirectoryName
-
-    # Check if the folder should be excluded
-    if ($excludeFolders -notcontains $folderPath) {
-        # Attempt to delete the file and catch any errors
-        try {
-            Remove-Item $file -Force -ErrorAction Stop
-            "File found and deleted: $file" | Out-File -Append $logFile
-            Write-Host "File $file deleted."
-        } catch {
-            $errorMessage = "Error deleting file $file: $($_.Exception.Message)"
-            $errorMessage | Out-File -Append $logFile
-            Write-Host $errorMessage
-        }
-    }
-}
+Map Network Drives on AADJ Machines: https://www.inthecloud247.com/map-network-drives-on-cloud-managed-windows-devices/
 
 --------------------
 Using Intune to configure a Scheduled Task to start a service at User logon: https://rahuljindalmyit.blogspot.com/2021/05/using-intune-to-configure-scheduled.html
