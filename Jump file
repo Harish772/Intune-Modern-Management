@@ -1,4 +1,41 @@
 --------------------
+GC for Post ESP
+<#
+Version: 1.0
+Script: Get-EspDetection
+Description:
+Skip the ESP for app installation
+Release notes:
+Version 1.0: Init
+#> 
+
+$processesExplorer = @(Get-CimInstance -ClassName 'Win32_Process' -Filter "Name like 'explorer.exe'" -ErrorAction 'Ignore')
+$esp = $false
+foreach ($processExplorer in $processesExplorer) {
+    $user = (Invoke-CimMethod -InputObject $processExplorer -MethodName GetOwner).User
+    if ($user -eq 'defaultuser0' -or $user -eq 'defaultuser1') {$esp = $true}
+}
+
+Write-Host $esp 
+
+--------------------
+GC for Laptops.Ps1
+$enclosureType = Get-WmiObject Win32_SystemEnclosure | select ChassisTypes
+
+ If ($enclosureType.ChassisTypes[0] -eq 12 -or $enclosureType.ChassisTypes[0]-eq 21) {} #Ignore Docking Stations
+
+
+ else {
+     switch ($enclosureType.ChassisTypes[0]) {
+     {$_ -in "8", "9", "10", "11", "12", "14", "18", "21","31"} {Write-Host "IsLaptop"}
+     {$_ -in "32"} {Write-Host "IsTablet"}
+     {$_ -in "3", "4", "5", "6", "7", "15", "16"} {Write-Host "IsDesktop"}
+     {$_ -in "23"}{Write-Host "IsServer"}
+     Default {Write-Host "Error Condition:" $_ `n`n "Full Output of Chassistype" $enclosureType.ChassisTypes }
+     }
+ }
+ 
+--------------------
 Quick Assist - Allow the admin to type in the Password in UAC Box on the remote system: https://www.pathumudana.com/2023/11/improve-experience-with-quick-assist.html
 
 One Drive Known Folder Move(KFM): https://tech.nicolonsky.ch/onedrive-known-folder-move-ms-intune/
