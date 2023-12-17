@@ -36,6 +36,14 @@ $enclosureType = Get-WmiObject Win32_SystemEnclosure | select ChassisTypes
  }
  
 --------------------
+Entered on 12/17/2023
+--------------------
+Get-IntuneManagementExtensionDiagnostics v2.0: https://github.com/petripaavola/Get-IntuneManagementExtensionDiagnostics
+
+How to Export Third-Party Drivers with PowerShell: https://www.scriptinglibrary.com/languages/powershell/how-to-export-third-party-drivers-with-powershell/?utm_source=dlvr.it&utm_medium=twitter
+
+Intune Logs: A Deep Dive into Locations, Interpretation, and Configuration :https://mem.zone/intune/intune-logs-deep-dive/
+--------------------
 Quick Assist - Allow the admin to type in the Password in UAC Box on the remote system: https://www.pathumudana.com/2023/11/improve-experience-with-quick-assist.html
 
 One Drive Known Folder Move(KFM): https://tech.nicolonsky.ch/onedrive-known-folder-move-ms-intune/
