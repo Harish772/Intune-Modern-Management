@@ -1,40 +1,13 @@
 --------------------
-GC for Post ESP
-<#
-Version: 1.0
-Script: Get-EspDetection
-Description:
-Skip the ESP for app installation
-Release notes:
-Version 1.0: Init
-#> 
-
-$processesExplorer = @(Get-CimInstance -ClassName 'Win32_Process' -Filter "Name like 'explorer.exe'" -ErrorAction 'Ignore')
-$esp = $false
-foreach ($processExplorer in $processesExplorer) {
-    $user = (Invoke-CimMethod -InputObject $processExplorer -MethodName GetOwner).User
-    if ($user -eq 'defaultuser0' -or $user -eq 'defaultuser1') {$esp = $true}
-}
-
-Write-Host $esp 
-
+Entered on 1/7/2024
 --------------------
-GC for Laptops.Ps1
-$enclosureType = Get-WmiObject Win32_SystemEnclosure | select ChassisTypes
+LAPS: https://charbelnemnom.com/windows-laps-with-microsoft-entra-and-intune/
+LAPS: https://www.petervanderwoude.nl/post/getting-started-with-windows-local-administrator-password-solution/
+LAPS: https://www.youtube.com/watch?v=-xjYp4FsLZw
+LAPS: https://www.youtube.com/watch?v=0qTqhmgQCes
 
- If ($enclosureType.ChassisTypes[0] -eq 12 -or $enclosureType.ChassisTypes[0]-eq 21) {} #Ignore Docking Stations
+Managed Identity (aka: service Account in Intune): https://tbone.se/2024/01/04/create-a-managed-identity-to-automate-intune-tasks/
 
-
- else {
-     switch ($enclosureType.ChassisTypes[0]) {
-     {$_ -in "8", "9", "10", "11", "12", "14", "18", "21","31"} {Write-Host "IsLaptop"}
-     {$_ -in "32"} {Write-Host "IsTablet"}
-     {$_ -in "3", "4", "5", "6", "7", "15", "16"} {Write-Host "IsDesktop"}
-     {$_ -in "23"}{Write-Host "IsServer"}
-     Default {Write-Host "Error Condition:" $_ `n`n "Full Output of Chassistype" $enclosureType.ChassisTypes }
-     }
- }
- 
 --------------------
 Entered on 12/17/2023
 --------------------
