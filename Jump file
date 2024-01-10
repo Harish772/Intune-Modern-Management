@@ -1,4 +1,25 @@
 --------------------
+Entered on 1/10/2024
+--------------------
+How to Enroll a Mac to Intune: https://www.youtube.com/watch?v=84kwUXKdOFc
+
+Import CIS Benchmark Baselines to Intune: https://www.youtube.com/watch?v=FUYQ7gWFWDc
+
+The way I do this:
+1. Login to CIS Workbench and download CIS Build Pack for given benchmark eg Windows 11... (https://workbench.cisecurity.org/)
+2. Unzip the build pack 
+3. Import whatever you need to Intune GPO Analyser
+4. You can even merge GPOs in Intune eg  Comp L1 and Comp L2
+5. Review and select policies
+6. Export as Intune configuration profile
+Done
+This way you have original stuff from CIS. You can edit this - add, remove etc.
+
+WindowsHardening as per CIS: https://github.com/R33Dfield/WindowsHardening
+
+MacOSHardening as per CIS: https://github.com/R33Dfield/MacOSHardening/tree/main
+
+--------------------
 Entered on 1/7/2024
 --------------------
 LAPS: https://charbelnemnom.com/windows-laps-with-microsoft-entra-and-intune/
