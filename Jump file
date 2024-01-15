@@ -1,4 +1,109 @@
 --------------------
+Entered on Set-IntunePrimaryUser-ScrapthPad.ps1
+--------------------
+Connect-MgGraph -appid 73b497b5-6c4b-4014-b031-79479736eea5 -tenantid 04f066a7-886b-4d04-b15f-acb544af8551
+
+<##
+
+#ScratchPad Area
+
+Get-IntuneManagedDevice | Get-MSGraphAllPages | Where-Object {$_.operatingsystem -eq 'Windows' } 
+Get-IntuneManagedDevice | Get-MSGraphAllPages | Where-Object {$_.UserPrincipalName -eq 'P44894@aaa-acg.net' } | Select-Object DeviceName, OperatingSystem, emailaddress, UserprincipalName
+Get-DeviceManagement_ManagedDevices | Get-MSGraphallpages | Where-Object {($_.UserPrincipalName -eq 'P44894@aaa-acg.net') -and ($_.operatingsystem -eq 'windows')} | Select-Object DeviceName, OperatingSystem, emailaddress, UserprincipalName
+
+
+##>
+
+#Step 0: Connect to Graph API.
+#Step 1: Determine who the target user is and get their UPN.  
+#step 2: Export all the Windows devices that are assigned to Target User from Step 1 via Intune Graph API to a CSV File, ensure this file has Enrolled by user info and the Primary User Info. 
+#Step 3: From the exported list of Windows Devices from Step 2, get the Associated Primary user Info from SCCM and ensure that it gets populated into the same CSV File in a different Column. 
+#Step 4: Make the necessary Graph Call to the Intune device to update it's primary user info. 
+
+#Step 0: Connect to Graph 
+#Finalized Script
+
+Connect-MgGraph -Scopes "DeviceManagementManagedDevices.ReadWrite.All"
+
+Connect-MSGraph 
+
+#Step 1: Enter the target User Name
+
+$TargetUserUPN= 'P70294@aaa-acg.net' ##Jeff Cardinal 
+
+Get-DeviceManagement_ManagedDevices | Get-MSGraphallpages | Where-Object {($_.UserPrincipalName -eq "$TargetUserUPN") -and ($_.operatingsystem -eq 'windows')} | Select-Object DeviceName, OperatingSystem, emailaddress, UserprincipalName | Export-Csv "C:\temp\some.csv" -Append -NoTypeInformation 
+
+#------------------
+
+#Step2: 
+
+$machines = Get-content "C:\temp.something.txt"
+$TotolCount = $Machines.Count 
+$CompletedCount = 0
+
+Foreach ($machine in $machines) {
+
+#Get-DeviceManagement_ManagedDevices | Get-MSGraphallpages | Where-Object {$_.DeviceName -eq "$Machine"} | Select-Object DeviceName, id | Export-Csv "C:\temp\some.csv" -Append -NoTypeInformation  
+
+Get-IntuneManagedDevice | Get-MSGraphallPages | Where-Object {$_.DeviceName -eq "$Machine"} | Select-Object DeviceName, id | Export-Csv "C:\temp\some.csv" -Append -NoTypeInformation  
+
+$CompletedCount++
+Write-Host "Completed $CompletedCount out of $TotalCount devices. Proceeding onto next....$Machine"
+
+}
+
+#----------------
+#--------------------
+#Step2.1: #
+# Define the path to your CSV file
+$csvPath = "C:\Path\to\your\input\file.csv"
+
+# Read the CSV file
+$csvData = Import-Csv -Path $csvPath
+
+# Initialize counters
+$totalCount = $csvData.Count
+$completedCount = 0
+
+# Loop through each row in the CSV and update Column B
+foreach ($row in $csvData) {
+    $machine = $row.'Column A'  # Replace 'Column A' with the actual column name
+
+    # Run the PowerShell command to get Intune Device ID
+    $intuneDevice = Get-IntuneManagedDevice | Get-MSGraphAllPages | Where-Object {$_.deviceName -eq $machine} | Select-Object deviceName, id
+
+    if ($intuneDevice) {
+        $row.'Column B' = $intuneDevice.id  # Replace 'Column B' with the actual column name
+    } else {
+        $row.'Column B' = "Device not found"  # Replace with an appropriate message if the device is not found
+    }
+
+    $completedCount++
+    Write-Host "Completed $completedCount out of $totalCount devices. Proceeding onto next... $machine"
+}
+
+# Save the updated CSV data back to the file
+$csvData | Export-Csv -Path $csvPath -NoTypeInformation
+
+Write-Host "CSV file updated with Intune Device IDs."
+#------------------
+
+
+#step 4:
+#The Target user must have an E5/E3 license assinged, if not this will not work. 
+
+$userId = "Enter your User Object ID here"
+
+$IntuneDeviceID = "Enter your User Intune Device ID here"
+
+$uri = "https://graph.microsoft.com/beta/deviceManagement/managedDevices('$IntuneDeviceID')/users/`$ref"
+
+$Body = @{ "@odata.id" = "https://graph.microsoft.com/beta/users/$userId" } | ConvertTo-Json
+
+$Method = "POST"
+
+Invoke-MgGraphRequest -Method $Method -uri $uri -body $Body
+--------------------
 Entered on 1/15/2024
 --------------------
 
