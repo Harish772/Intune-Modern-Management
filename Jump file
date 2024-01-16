@@ -1,7 +1,3 @@
-Re-Designing M365 Apps: https://blog.mindcore.dk/2024/01/building-m365-apps-designed-for-autopilot-and-beyond/
-
-Extension/Custom Device Attributes: https://blogs.gowdhaman.in/intune-grouping-based-on-hardware-inventory-data/
-
 
 --------------------
 Entered on Set-IntunePrimaryUser-ScrapthPad.ps1
@@ -111,6 +107,10 @@ Invoke-MgGraphRequest -Method $Method -uri $uri -body $Body
 --------------------
 Entered on 1/15/2024
 --------------------
+Re-Designing M365 Apps: https://blog.mindcore.dk/2024/01/building-m365-apps-designed-for-autopilot-and-beyond/
+
+Extension/Custom Device Attributes: https://blogs.gowdhaman.in/intune-grouping-based-on-hardware-inventory-data/
+
 
 Windows Updates via Powershell: https://woshub.com/pswindowsupdate-module/
 Implement this kind of strategy for LAPS ASC Documentation: https://www.youtube.com/watch?v=d6usiB4MKq8
