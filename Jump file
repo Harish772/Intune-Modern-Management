@@ -107,6 +107,10 @@ Invoke-MgGraphRequest -Method $Method -uri $uri -body $Body
 --------------------
 Entered on 1/15/2024
 --------------------
+Monitoring Battery Health Using Powershell: https://www.cyberdrain.com/monitoring-with-powershell-monitoring-battery-health/?utm_source=dlvr.it&utm_medium=twitter
+
+PSwindowsupdate Module: https://powershellisfun.com/2024/01/19/using-the-powershell-pswindowsupdate-module/
+
 Re-Designing M365 Apps: https://blog.mindcore.dk/2024/01/building-m365-apps-designed-for-autopilot-and-beyond/
 
 Extension/Custom Device Attributes: https://blogs.gowdhaman.in/intune-grouping-based-on-hardware-inventory-data/
