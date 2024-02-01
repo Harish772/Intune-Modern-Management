@@ -1,6 +1,35 @@
 # Specify the registry path
 $registryPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run'
 
+# Get the registry key
+$registryKey = Get-Item -LiteralPath $registryPath
+
+# Get the subkeys under the specified registry path
+$subkeys = $registryKey.GetValueNames()
+
+# Define the pattern for matching Controlup followed by gibberish characters
+$pattern = '^Controlup'
+
+# Loop through each subkey and check if it starts with 'Controlup'
+foreach ($subkey in $subkeys) {
+    if ($subkey -like $pattern) {
+        # Construct the full registry key path
+        $fullKeyPath = Join-Path -Path $registryPath -ChildPath $subkey
+
+        # Display the key to be deleted
+        Write-Host "Deleting registry key: $fullKeyPath"
+
+        # Delete the registry key
+        Remove-ItemProperty -Path $registryPath -Name $subkey -Force
+    }
+}
+
+Write-Host "Registry key deletion completed."
+
+----------------------------------
+# Specify the registry path
+$registryPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run'
+
 # Get all the subkeys under the specified registry path
 $subkeys = Get-Item -LiteralPath $registryPath | Get-ItemProperty | ForEach-Object { $_.PSChildName }
 
