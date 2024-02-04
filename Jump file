@@ -1,56 +1,4 @@
-# Specify the registry path
-$registryPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run'
 
-# Get the registry key
-$registryKey = Get-Item -LiteralPath $registryPath
-
-# Get the subkeys under the specified registry path
-$subkeys = $registryKey.GetValueNames()
-
-# Define the pattern for matching Controlup followed by gibberish characters
-$pattern = '^Controlup'
-
-# Loop through each subkey and check if it starts with 'Controlup'
-foreach ($subkey in $subkeys) {
-    if ($subkey -like $pattern) {
-        # Construct the full registry key path
-        $fullKeyPath = Join-Path -Path $registryPath -ChildPath $subkey
-
-        # Display the key to be deleted
-        Write-Host "Deleting registry key: $fullKeyPath"
-
-        # Delete the registry key
-        Remove-ItemProperty -Path $registryPath -Name $subkey -Force
-    }
-}
-
-Write-Host "Registry key deletion completed."
-
-----------------------------------
-# Specify the registry path
-$registryPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run'
-
-# Get all the subkeys under the specified registry path
-$subkeys = Get-Item -LiteralPath $registryPath | Get-ItemProperty | ForEach-Object { $_.PSChildName }
-
-# Define the pattern for matching Controlup followed by gibberish characters
-$pattern = '^Controlup'
-
-# Loop through each subkey and check if it starts with 'Controlup'
-foreach ($subkey in $subkeys) {
-    if ($subkey -like $pattern) {
-        # Construct the full registry key path
-        $fullKeyPath = Join-Path -Path $registryPath -ChildPath $subkey
-
-        # Display the key to be deleted
-        Write-Host "Deleting registry key: $fullKeyPath"
-
-        # Delete the registry key
-        Remove-Item -Path $fullKeyPath -Force
-    }
-}
-
-Write-Host "Registry key deletion completed."
 
 --------------------
 Entered on Set-IntunePrimaryUser-ScrapthPad.ps1
@@ -264,7 +212,7 @@ Troubleshooting Guide for Windows Autopilot: https://oofhours.com/2019/10/08/tro
 Disable first sign-in animation: https://skotheimsvik.no/the-ultimate-guide-to-intune-powered-windows-11-shared-devices
 
 Autopilot Import GUI: https://ugurkoc.de/autopilot-import-gui/
-
+Simplest explination of Making a POST Call via Powershell to Graph - Intune Primary User Automation: https://www.youtube.com/watch?v=C2ldqZD8JXI
 Autopilot GUI Tool – Upload HW hash with a user interface INTUNE : https://www.rockenroll.tech/2020/11/09/autopilot-tool-upload-hw-hash-with-a-user-interface/#primary
 
 Intune Management Extension Deepdive: https://github.com/smcallister594/memugscotland/blob/main/MEMUGScotland-Resources/Slides/2023/31st-August/Intune%20Management%20Extension%20Deep%20Dive.pptx
