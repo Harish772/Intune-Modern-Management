@@ -156,6 +156,9 @@ LAPS: https://www.petervanderwoude.nl/post/getting-started-with-windows-local-ad
 LAPS: https://www.youtube.com/watch?v=-xjYp4FsLZw
 LAPS: https://www.youtube.com/watch?v=0qTqhmgQCes
 LAPS: https://www.youtube.com/watch?v=0SlHW0oVJfQ
+Windows LAPS: New post-authentication-action features explination: https://www.youtube.com/watch?v=iypr8o98JkU (Copy the CMDs used in this video to a txt file)
+
+Windows LAPS: Integration with the local device MaximumPasswordAge policy: https://www.youtube.com/watch?v=-RpuQIsiO_Q (Copy the CMDs used in this video to a txt file)
 
 
 Managed Identity (aka: service Account in Intune): https://tbone.se/2024/01/04/create-a-managed-identity-to-automate-intune-tasks/
