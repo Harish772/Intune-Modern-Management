@@ -1,4 +1,114 @@
+# Define variables
+$count = 0
+$timeout = 300
 
+# Stop PanGPS service
+Stop-Service -Name "pangps" -Force
+
+# Loop to check if PanGPS service is stopped
+while ($count -le $timeout) {
+    Start-Sleep -Seconds 3
+    $count += 3
+
+    $serviceStatus = Get-Service -Name "pangps" | Select-Object -ExpandProperty Status
+    if ($serviceStatus -eq "Stopped") {
+        Write-Host "PanGPS service stopped successfully."
+        break
+    }
+}
+
+# Check if the timeout occurred
+if ($count -gt $timeout) {
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    Add-Content -Path "C:\Program Files\Palo Alto Networks\GlobalProtect\PanGPS.log" -Value "$timestamp - PanGPS service cannot be stopped. Timeout $timeout seconds."
+}
+
+
+This PowerShell script achieves the same functionality as the provided batch script. It stops the PanGPS service and checks every 3 seconds for up to 5 minutes to ensure that the service is stopped. If the service is stopped within the specified time, it prints a success message. If the timeout is reached, it logs an error message to the specified log file.
+
+--------------------------------------
+
+# Define variables
+$cnt = 0
+$timeout = 120
+
+# Loop to check if Pangps service is running
+while ($cnt -le $timeout) {
+    Start-Sleep -Seconds 1
+    $cnt++
+
+    $serviceStatus = Get-Service -Name "pangps" | Select-Object -ExpandProperty Status
+    if ($serviceStatus -eq "Running") {
+        Write-Host "PanGPS service is running."
+        break
+    }
+}
+
+# Check if the timeout occurred
+if ($cnt -gt $timeout) {
+    Write-Output "Timeout reached. PanGPS service not running within $timeout seconds."
+}
+
+This PowerShell script achieves the same functionality as the provided batch script. It checks if the PanGPS service is running every second for up to 2 minutes. If the service is running within the specified time, it prints a success message. If the timeout is reached, it logs an error message.
+
+--------------------------------------------
+
+
+# Define variables
+$count = 0
+$timeout = 300
+
+# Loop to check if Pangps service is running
+while ($count -le $timeout) {
+    Start-Sleep -Seconds 3
+    $count += 3
+
+    $serviceStatus = Get-Service -Name "pangps" | Select-Object -ExpandProperty Status
+    if ($serviceStatus -eq "Running") {
+        Write-Output "Installation completed!"
+        break
+    }
+}
+
+# Check if the timeout occurred
+if ($count -gt $timeout) {
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    Add-Content -Path "C:\Program Files\Palo Alto Networks\GlobalProtect\PanGPS.log" -Value "$timestamp - PanGPS service cannot start. Timeout $timeout seconds."
+}
+
+This PowerShell script performs the same logic as the provided batch script. It checks if the PanGPS service is in the "Running" state every 3 seconds for up to 5 minutes. If the service is running within the specified time, it prints a success message. If the timeout is reached, it logs an error message.
+
+--------------------------------------------
+
+
+
+# Define service parameters
+$serviceName = "PanGPS"
+$binPath = "C:\Program Files\Palo Alto Networks\GlobalProtect\PanGPS.exe"
+$startType = "Auto"
+
+# Check if the service already exists
+if (Get-Service -Name $serviceName -ErrorAction SilentlyContinue) {
+    Write-Output "Service $serviceName already exists."
+} else {
+    # Create the service
+    $serviceParams = @{
+        'Name' = $serviceName
+        'BinaryPathName' = $binPath
+        'StartType' = $startType
+    }
+
+    New-Service @serviceParams
+
+    # Start the service
+    Start-Service -Name $serviceName
+
+    Write-Output "Service $serviceName created and started successfully."
+}
+
+
+This script checks if a service named "PanGPS" already exists. If it does, it prints a message indicating that the service already exists. If the service doesn't exist, it creates a new service with the specified parameters and starts it. Adjust the `$binPath` and `$startType` variables as needed.
+------------------------------
 
 I have discussed this internally and below is the recommendations from Palo Alto
 As a best practice the below steps when upgrading or installing GlobalProtect App via SCCM.
