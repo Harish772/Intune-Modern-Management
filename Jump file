@@ -1,3 +1,46 @@
+ # Define the file to search for
+        $targetFile = "*Log4j-1.*.jar"
+
+        # Define the log file path
+        $logFile = "C:\Windows\Logs\Software\Log4j_Remediator.log"
+
+        # Define folders to exclude from the search
+        $excludeFolders = @(
+            "C:\ProgramData\Sentinel",
+            "C:\ProgramData\Sentinel\Deployer",
+            "C:\ProgramData\Sentinel\Deployer\Dumps",
+            "C:\GIT*"
+        #   "C:\GITGW9010\*" (Didn't work)
+        #   "C:\GITHub\*" (Didn't work)
+        #   "C:\GITHubv10\*" (Didn't work)
+        #   "C:\GITmewversion\*" (Didn't work)
+        )
+
+        # Create the log file if it doesn't exist
+        if (-not (Test-Path $logFile)) {
+            New-Item -Path $logFile -ItemType File
+        }
+
+        # Search the entire C:\ drive, including hidden files and folders, for the target file
+        Get-ChildItem -Path "C:\" -Filter *Log4j-1.*.jar -File -Recurse -Force | ForEach-Object {
+            $file = $_.FullName
+            $folderPath = (Get-Item -Path $file).DirectoryName
+
+            # Check if the folder should be excluded
+            if ($excludeFolders -notcontains $folderPath) {
+                # Attempt to delete the file and catch any errors
+                try {
+                    Remove-Item $file -Force -ErrorAction SilentlyContinue
+                    "File found and deleted: $file" | Out-File -Append $logFile
+                    Write-Host "File $file deleted."
+                } catch {
+                    $errorMessage = "Error deleting file $file $($_.Exception.Message)"
+                    $errorMessage | Out-File -Append $logFile
+                    Write-Host $errorMessage
+                }
+            }
+        }
+
 --------------------
 Entered on 2/15/2024
 --------------------
