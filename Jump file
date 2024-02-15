@@ -8,14 +8,14 @@
         $excludeFolders = @(
             "C:\ProgramData\Sentinel",
             "C:\ProgramData\Sentinel\Deployer",
-            "C:\ProgramData\Sentinel\Deployer\Dumps",
-            "C:\GIT*"
-        #   "C:\GITGW9010\*" (Didn't work)
-        #   "C:\GITHub\*" (Didn't work)
-        #   "C:\GITHubv10\*" (Didn't work)
-        #   "C:\GITmewversion\*" (Didn't work)
+            "C:\ProgramData\Sentinel\Deployer\Dumps"
+       
         )
+# Get all folders at the root of C:\ starting with 'GIT'
+$gitFolders = Get-ChildItem -Path "C:\" -Directory -Filter "GIT*" | Select-Object -ExpandProperty FullName
 
+# Add the GIT folders to the exclude list
+$excludeFolders += $gitFolders
         # Create the log file if it doesn't exist
         if (-not (Test-Path $logFile)) {
             New-Item -Path $logFile -ItemType File
