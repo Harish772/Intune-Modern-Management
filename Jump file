@@ -1,46 +1,20 @@
- # Define the file to search for
-        $targetFile = "*Log4j-1.*.jar"
+--------------------
+Entered on 2/25/2024
+--------------------
+Deploy Win32 App with User Device Affinity: https://oliverkieselbach.com/2022/08/30/deploy-an-intune-application-with-user-device-affinity/
+Convert a Pro to Enterprise: https://oofhours.com/2021/06/01/what-are-windows-10-virtual-skus/
 
-        # Define the log file path
-        $logFile = "C:\Windows\Logs\Software\Log4j_Remediator.log"
+Configure Azure file shares for Entra joined Windows devices and hybrid identities: https://www.inthecloud247.com/configure-azure-file-shares-for-entra-joined-windows-devices-and-hybrid-identities/
 
-        # Define folders to exclude from the search
-        $excludeFolders = @(
-            "C:\ProgramData\Sentinel",
-            "C:\ProgramData\Sentinel\Deployer",
-            "C:\ProgramData\Sentinel\Deployer\Dumps"
-       
-        )
-# Get all folders at the root of C:\ starting with 'GIT'
-$gitFolders = Get-ChildItem -Path "C:\" -Directory -Filter "GIT*" | Select-Object -ExpandProperty FullName
+https://lazyadmin.nl/powershell/connect-mggraph/
 
-# Add the GIT folders to the exclude list
-$excludeFolders += $gitFolders
-        # Create the log file if it doesn't exist
-        if (-not (Test-Path $logFile)) {
-            New-Item -Path $logFile -ItemType File
-        }
+https://lazyadmin.nl/powershell/set-environment-variable/
+https://lazyadmin.nl/it/how-to-fix-trust-relationship-between-this-workstation-and-the-primary-domain-failed/
+https://lazyadmin.nl/win-11/disable-widgets-windows-11/
+https://lazyadmin.nl/it/get-adobject/
 
-        # Search the entire C:\ drive, including hidden files and folders, for the target file
-        Get-ChildItem -Path "C:\" -Filter *Log4j-1.*.jar -File -Recurse -Force | ForEach-Object {
-            $file = $_.FullName
-            $folderPath = (Get-Item -Path $file).DirectoryName
-
-            # Check if the folder should be excluded
-            if ($excludeFolders -notcontains $folderPath) {
-                # Attempt to delete the file and catch any errors
-                try {
-                    Remove-Item $file -Force -ErrorAction SilentlyContinue
-                    "File found and deleted: $file" | Out-File -Append $logFile
-                    Write-Host "File $file deleted."
-                } catch {
-                    $errorMessage = "Error deleting file $file $($_.Exception.Message)"
-                    $errorMessage | Out-File -Append $logFile
-                    Write-Host $errorMessage
-                }
-            }
-        }
-
+https://lazyadmin.nl/it/windows-hello-for-business-cloud-trust/
+https://lazyadmin.nl/it/net-user-command/
 --------------------
 Entered on 2/15/2024
 --------------------
